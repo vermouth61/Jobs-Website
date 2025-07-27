@@ -30,7 +30,7 @@ defineProps({
 <template>
   <div
     dir="rtl"
-    class="shadow-[0px_4px_8px_rgba(0,0,0,0.10)] md:ps-[85px] md:pe-[40px] py-[24px] px-[24px] flex flex-col items-center gap-3 md:flex-row md:justify-between"
+    class="shadow-[0px_4px_8px_rgba(0,0,0,0.10)] py-[24px] px-[24px] flex flex-col items-center gap-3 md:flex-row md:justify-between"
   >
     <div class="flex flex-col gap-[12px]">
       <h2 class="text-[#36394A] font-[700] text-[18px]">{{ jobTitle }}</h2>
