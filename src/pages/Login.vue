@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import Button from '../components/ui/button.vue';
+import MyInput from '../components/ui/MyInput.vue';
 import { FaFacebook } from 'vue-icons-plus/fa';
 import { FcGoogle } from 'vue-icons-plus/fc';
 const email = ref('');
@@ -16,7 +17,7 @@ const onLogin = () => {
     style="background-image: url('src/assets/login-bg.jpg'); direction: rtl"
   >
     <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/50 z-0"></div>
+    <div class="absolute inset-0 bg-black/80 z-0"></div>
     <div class="text-center mb-8 text-white drop-shadow-lg z-10">
       <router-link to="/" class="flex items-center justify-center mb-4"
         ><img src="/src/assets/logo.svg" alt="logo"
@@ -50,12 +51,12 @@ const onLogin = () => {
           <label for="email" class="block mb-1 font-medium"
             >البريد الإلكتروني</label
           >
-          <input
+          <MyInput
             id="email"
             v-model="email"
             type="email"
             placeholder="أدخل بريدك الإلكتروني"
-            class="w-full px-4 py-2 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:border-blue-600 text-base"
+            class="w-full focus:outline-none focus:border-blue-600 text-base"
             required
           />
         </div>
@@ -63,12 +64,12 @@ const onLogin = () => {
           <label for="password" class="block mb-1 font-medium"
             >كلمة المرور</label
           >
-          <input
+          <MyInput
             id="password"
             v-model="password"
             type="password"
             placeholder="أدخل كلمة المرور"
-            class="w-full px-4 py-2 rounded-md border border-gray-300 bg-gray-50 focus:outline-none focus:border-blue-600 text-base"
+            class="w-full focus:outline-none focus:border-blue-600 text-base"
             required
           />
           <a href="#" class="block text-blue-600 text-sm mt-1 hover:underline"
