@@ -155,7 +155,7 @@ const onSignup = () => {
       <div class="text-center mt-6 text-gray-700 text-base">
         عندك حساب؟
         <router-link to="/login" class="text-blue-600 hover:underline mr-1"
-          >..تسجيل الدخول</router-link
+          >تسجيل الدخول</router-link
         >
       </div>
     </div>
