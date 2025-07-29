@@ -22,7 +22,7 @@ const onLogin = () => {
       <router-link to="/" class="flex items-center justify-center mb-4"
         ><img src="/src/assets/logo.svg" alt="logo"
       /></router-link>
-      <p class="text-4xl font-bold">الموقع رقم 1 للوظائف في مصر</p>
+      <h2 class="text-4xl font-bold">الورشة والمعلم ، معانا الكل كسبان</h2>
     </div>
     <div
       class="bg-white rounded-xl shadow-lg px-8 py-10 w-full max-w-xl flex flex-col z-10"
@@ -31,11 +31,15 @@ const onLogin = () => {
         تسجيل الدخول
       </h2>
       <div class="flex gap-2 mb-4 font-semibold w-full">
-        <Button extraClass="bg-gray-100 hover:bg-gray-300 w-full">
+        <Button
+          extraClass="bg-gray-100 border border-gray-300 hover:bg-gray-300 w-full"
+        >
           <FaFacebook class="inline-block ml-2 text-[#1877F2]" />
           سجل عن طريق فيسبوك
         </Button>
-        <Button extraClass="bg-gray-100 hover:bg-gray-300 w-full">
+        <Button
+          extraClass="bg-gray-100 border border-gray-300 hover:bg-gray-300 w-full"
+        >
           <FcGoogle class="inline-block ml-2" />
           سجل عن طريق جوجل
         </Button>
@@ -48,7 +52,7 @@ const onLogin = () => {
       </div>
       <form @submit.prevent="onLogin">
         <div class="mb-4 relative">
-          <label for="email" class="block mb-1 font-medium"
+          <label for="email" class="block mb-1 font-semibold"
             >البريد الإلكتروني</label
           >
           <MyInput
@@ -61,7 +65,7 @@ const onLogin = () => {
           />
         </div>
         <div class="mb-4 relative">
-          <label for="password" class="block mb-1 font-medium"
+          <label for="password" class="block mb-1 font-semibold"
             >كلمة المرور</label
           >
           <MyInput
@@ -82,8 +86,8 @@ const onLogin = () => {
       </form>
       <div class="text-center mt-6 text-gray-700 text-base">
         لا يوجد حساب؟
-        <a href="/signup" class="text-blue-600 hover:underline mr-1"
-          >إنشاء حساب جديد</a
+        <router-link to="/signup" class="text-blue-600 hover:underline mr-1"
+          >إنشاء حساب جديد</router-link
         >
       </div>
     </div>
