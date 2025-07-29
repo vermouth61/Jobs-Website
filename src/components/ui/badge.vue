@@ -15,7 +15,7 @@ defineProps({
         ? 'bg-[#FEF9C3] text-[#854D0E]'
         : title === 'تم القبول'
         ? 'bg-[#DCFCE7] text-[#166534]'
-        : title === 'تم الرفض'
+        : title === 'مرفوض'
         ? 'bg-[#FEE2E2] text-[#991B1B]'
         : title === 'مبتدئ'
         ? 'bg-[#FFEDD5] text-[#C2410C]'
