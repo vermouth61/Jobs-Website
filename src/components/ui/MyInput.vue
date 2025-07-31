@@ -3,7 +3,7 @@ defineProps({
   type: {
     type: String,
     required: true,
-    default: "text",
+    default: 'text',
   },
   modelValue: {
     type: [String, Boolean],
@@ -11,18 +11,21 @@ defineProps({
   },
   extraClass: {
     type: String,
-    default: "",
+    default: '',
   },
 });
-defineEmits(["update:modelValue"]);
+defineEmits(['update:modelValue']);
 </script>
 <template>
   <input
-    v-if="type === 'text' || type === 'password'"
+    v-if="type === 'text' || type === 'password' || type === 'email'"
     :type="type"
     :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
-    :class="['px-[8px] py-[12px] placeholder:text-[#666D80] border-[1px] border-[#7D889D] bg-[#F6F8FA] rounded-lg focus:outline-[#666D80]', extraClass]"
+    :class="[
+      'px-[8px] py-[12px] placeholder:text-[#666D80] border-[1px] border-[#7D889D] bg-[#F6F8FA] rounded-lg focus:outline-[#666D80]',
+      extraClass,
+    ]"
   />
   <input
     v-else-if="type === 'checkbox'"
