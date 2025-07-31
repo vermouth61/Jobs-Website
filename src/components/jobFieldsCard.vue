@@ -15,7 +15,7 @@ defineProps({
 <template>
   <div
     dir="rtl"
-    class="bg-white w-[400px] flex flex-col gap-[8px] items-center py-[16px] px-[24px] rounded-2xl border-[1px] border-[#DFE1E7]"
+    class="bg-white w-[400px] flex flex-col gap-[8px] items-center py-[24px] px-[16px] rounded-2xl border-[1px] border-[#DFE1E7]"
   >
     <div class="flex items-center gap-[8px]">
       <div class="p-[12px] rounded-lg bg-[#ECEFF3] text-[#36394A]">
@@ -26,9 +26,9 @@ defineProps({
     <p class="p-[10px] mb-[8px] text-[18px] text-[#7D889D] font-[400]">
       {{ description }}
     </p>
-    <div>
-      <Button buttonType="green">وظائف {{ title }} المتاحة</Button>
-    </div>
+    
+      <Button buttonType="green" extraClass="w-full font-[600]">وظائف {{ title }} المتاحة</Button>
+    
   </div>
 </template>
 
