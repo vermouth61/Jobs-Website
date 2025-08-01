@@ -129,11 +129,6 @@ const onSignup = () => {
             class="w-full focus:outline-none focus:border-blue-600 text-base"
             required
           />
-          <a
-            href="#"
-            class="block text-blue-600 text-sm mt-1 hover:underline text-right"
-            >نسيت كلمة المرور؟</a
-          >
         </div>
         <div class="mb-4 relative">
           <label for="mobile" class="block mb-1 font-semibold text-right"
