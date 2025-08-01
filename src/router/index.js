@@ -4,6 +4,7 @@ import MainLayout from '../Layout/mainLayout.vue';
 import Login from '../pages/Login.vue';
 import Signup from '../pages/Signup.vue';
 import Home from '../pages/Home/Home.vue';
+import WorkerAccount from '../pages/WorkerAccount/WorkerAccount.vue';
 
 
 const routes = [

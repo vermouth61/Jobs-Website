@@ -5,7 +5,7 @@ import Button from './ui/button.vue';
 <template>
   <nav
     dir="rtl"
-    class="bg-white px-[20px] sticky z-10 top-0 xl:px-[100px] lg:px-[78px] py-[14px] flex flex-wrap justify-between items-center shadow-[0px_4px_10px_rgba(0,0,0,0.25)]"
+    class="bg-[rgba(255,255,255,0.80)] px-[20px] sticky z-10 top-0 xl:px-[100px] lg:px-[78px] py-[14px] flex flex-wrap justify-between items-center backdrop-blur-[9px]"
   >
     <router-link to="/">
       <img src="../assets/logo.svg" alt="logo" />
