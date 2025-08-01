@@ -5,6 +5,7 @@ import Login from '../pages/Login.vue';
 import Signup from '../pages/Signup.vue';
 import Home from '../pages/Home/Home.vue';
 
+
 const routes = [
   {
     path: '/',
@@ -15,6 +16,11 @@ const routes = [
         name: 'Home',
         component: Home,
       },
+      {
+        path: '/worker-account',
+        name: 'WorkerAccount',
+        component: WorkerAccount,
+      }
     ],
   },
   {
