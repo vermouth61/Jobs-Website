@@ -25,7 +25,7 @@ defineProps({
 </script>
 
 <template>
-    <div dir="rtl" class="w-[295px] px-[16px] py-[24px] bg-[#FFF] border-[1px] border-[#DFE1E7] rounded-[8px]">
+    <div dir="rtl" class="w-[295px] px-[16px] py-[24px] bg-[#F6F8FA] border-[1px] border-[#B8BCC7] rounded-[8px]">
         <h1 class="text-[#1F2937] text-[20px] font-[500] mb-[12px] flex gap-[8px] items-center">
             <BsFillPersonFill class="text-[hsla(220,98%,57%,1)]" />
             المعلومات الشخصية</h1>

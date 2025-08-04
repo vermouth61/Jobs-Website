@@ -25,7 +25,7 @@ defineProps({
 </script>
 
 <template>
-    <div dir="rtl" class="flex p-[24px] bg-white rounded-[8px] border-[1px] border-[#DFE1E7] w-full mx-auto ">
+    <div dir="rtl" class="flex p-[24px] bg-[#F6F8FA] rounded-[8px] border-[1px] border-[#B8BCC7] w-full mx-auto ">
         <div class="flex items-center gap-[16px] w-full">
             <div>
                 <img src="../assets/profile/person.jpg" alt="Person" class="w-[200px] h-[200px] rounded-[8px] object-cover" />

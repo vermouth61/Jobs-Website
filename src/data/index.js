@@ -141,3 +141,88 @@ export const faqsArray = [
     open: false,
   },
 ];
+
+export const workerExperienceArray = [
+  {
+    companyName: "شركة النور الصناعية – القاهرة",
+    jobTitle: "فني لحام أرجون وكهرباء",
+    description: "لحام أنابيب وأنظمة ستانلس وألومنيوم باستخدام أرجون بدقة عالية، مع تنفيذ مشروعات مصانع ومراكز طبية. ",
+    duration: "2021 - حتى الآن",
+  },
+  {
+    companyName: "شركة الأمل للمقاولات – الجيزة",
+    jobTitle: "فني لحام",
+    description: "أعمال لحام كهرباء ثقيل وخفيف في معدات المصانع، وتجميع هياكل معدنية للمخازن والورش.",
+    duration: "2019 - 2021",
+  },
+  {
+    companyName: "شركة السلام للصناعات المعدنية – الإسكندرية",
+    jobTitle: "مساعد لحام مبتدئ",
+    description: "مساعدة في لحام الصاج الثقيل وتجميع وحدات صناعية تحت إشراف مهندسين متخصصين.",
+    duration: "2017 - 2019",
+  },
+];
+
+const images = import.meta.glob('../assets/portfolio/*.png', { eager: true });
+export const workerPortfolioArray = [
+  {
+    title: "شبابيك حديدية مزخرفة",
+    description: "شبابيك أمان بنقوش إسلامية جميلة",
+    image: images['../assets/portfolio/c1.png'].default,
+  },
+  {
+    title: "معدات المطابخ",
+    description: "ستيل مقاوم للصدأ - 2023",
+    image: images['../assets/portfolio/c2.png'].default,
+  },
+  {
+    title: "درابزين سلالم معدني",
+    description: "تصنيع وتركيب درابزين سلالم بتصميم عصري",
+    image: images['../assets/portfolio/c3.png'].default,
+  },
+  {
+    title: "هيكل الألمنيوم",
+    description: "مشروع إنشائي - 2024",
+    image: images['../assets/portfolio/c4.png'].default,
+  },
+  {
+    title: "بوابات حديدية",
+    description: "عمل فني - 2023",
+    image: images['../assets/portfolio/c5.png'].default,
+  },
+  {
+    title: "إصلاح المعدات الثقيلة",
+    description: "صيانة صناعية - 2023",
+    image: images['../assets/portfolio/c6.png'].default,
+  },
+  {
+    title: "تصنيع معدني مخصص",
+    description: "ورشة متخصصة - 2022",
+    image: images['../assets/portfolio/c7.png'].default,
+  },
+  {
+    title: "أثاث معدني مخصص",
+    description: "تصميم وتنفيذ طاولات وكراسي معدنية فنية",
+    image: images['../assets/portfolio/c8.png'].default,
+  },
+  {
+    title: "هيكل معدني للحدائق",
+    description: "بناء هيكل معدني للمساحات الخارجية",
+    image: images['../assets/portfolio/c9.png'].default,
+  },
+  {
+    title: "هيكل معدني للمباني",
+    description: "تنفيذ هيكل معدني لمبنى تجاري",
+    image: images['../assets/portfolio/c10.png'].default,
+  },
+  {
+    title: "لحام أنابيب الصلب",
+    description: "مشروع صناعي - 2024",
+    image: images['../assets/portfolio/c11.png'].default,
+  },
+  {
+    title: "بوابة حديدية فنية",
+    description: "تصميم وتنفيذ بوابة حديدية بنقوش عربية تراثية",
+    image: images['../assets/portfolio/c12.png'].default,
+  },
+];
