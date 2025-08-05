@@ -226,3 +226,31 @@ export const workerPortfolioArray = [
     image: images['../assets/portfolio/c12.png'].default,
   },
 ];
+
+const peopleImages = import.meta.glob('../assets/peoples/*.jpg', { eager: true });
+export const workerRatingArray = [
+  {
+    name: "محمد ياسر",
+    rating: 4.5,
+    comment: "خبرة ممتازة في اللحام والحدادة. نفذ مشروع الهيكل المعدني لمصنعي بجودة عالية ومهنية كبيرة.",
+    image: peopleImages['../assets/peoples/p1.jpg'].default,
+  },
+  {
+    name: "مرزوق الخولي",
+    rating: 5,
+    comment: "عمل متقن ودقيق جداً. أحمد نفذ لي بوابة منزلي بشكل رائع والتزم بالموعد المحدد. أنصح به بشدة",
+    image: peopleImages['../assets/peoples/p2.jpg'].default,
+  },
+  {
+    name: "عبد الرحمن شبل",
+    rating: 4,
+    comment: "أسعار معقولة وعمل نظيف ، صنع لي شبابيك حديدية  جميلة جداً ومتينة راضي تماماً عن النتيجة",
+    image: peopleImages['../assets/peoples/p3.jpg'].default,
+  },
+  {
+    name: "وهدان ممدوح",
+    rating: 5,
+    comment: "خبرة ممتازة في اللحام والحدادة. نفذ مشروع الهيكل المعدني لمصنعي بجودة عالية ومهنية كبيرة.",
+    image: peopleImages['../assets/peoples/p4.jpg'].default,
+  },
+];
