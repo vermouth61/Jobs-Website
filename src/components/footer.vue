@@ -9,7 +9,7 @@ import {  BiLogoLinkedin } from "vue-icons-plus/bi";
 import { RiFacebookFill, RiTwitterXFill } from "vue-icons-plus/ri";
 </script>
 <template>
-  <div class="bg-black py-[64px] mt-[96px]">
+  <div class="bg-black py-[64px]">
     <div dir="rtl" class="flex flex-wrap gap-5 justify-between px-[20px] lg:px-[100px] mb-[45px] items-start">
       <div class="flex flex-col w-[392px] gap-[21px]">
         <div>

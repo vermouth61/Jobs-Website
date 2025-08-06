@@ -21,8 +21,12 @@ defineProps({
         ? 'bg-[#FFEDD5] text-[#C2410C]'
         : title === 'دوام كامل'
         ? 'bg-[#DBEAFE] text-[#246BFD]'
-        : title === 'عن بُعد'
+        : title === 'مشروع بالاتفاق'
         ? 'bg-[#F3E8FF] text-[#7E22CE]'
+        : title === 'دوام جزئي'
+        ? 'bg-[#FFD3F6] text-[#7100A2]'
+        : title === 'خبرة متوسطة'
+        ? 'bg-[#DCFCE7] text-[#15803D]'
         : 'bg-[#c3e9f1] text-[#187e92]',
       'py-[4px] w-fit px-[16px] text-[14px] rounded-full',
     ]"
@@ -30,7 +34,6 @@ defineProps({
     {{ title }}
   </div>
 </template>
-
 
 <!-- How to use this component -->
 

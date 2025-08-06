@@ -22,7 +22,7 @@ const emit = defineEmits(["clickButton"]);
         ? 'border-[1px] px-[20px] py-[8px] rounded-lg text-white bg-[#40C4AA] hover:bg-[#379b87]'
         : buttonType === 'secondary'
         ? 'px-[16px] py-[16px] bg-[#DF1C41] hover:bg-[#AA0F2C] text-white'
-        : 'px-[20px] py-[8px] rounded-lg',
+        :buttonType === 'outline'? 'border-[1px] border-[#246BFD] px-[20px] py-[8px] rounded-lg text-[#246BFD] hover:bg-[#246BFD] hover:text-white': 'px-[20px] py-[8px] rounded-lg',
       'cursor-pointer duration-300',
       extraClass,
     ]"
