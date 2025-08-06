@@ -35,7 +35,7 @@ import { workerRatingArray } from '../../data/index.js';
         </div>
         </div>
     
-    <div class="mt-[24px] flex flex-col items-center lg:items-start">
+    <div class="mt-[24px] mb-[128px] flex flex-col items-center lg:items-start">
         <div>
             <h1 class="text-[#1F2937] text-[20px] font-[500] flex items-center">
                 <AiFillStar class="inline-block text-[#246BFD] me-[8px]"/>التقييمات</h1>
