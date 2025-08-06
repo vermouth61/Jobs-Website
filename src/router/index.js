@@ -5,6 +5,8 @@ import Login from '../pages/Login.vue';
 import Signup from '../pages/Signup.vue';
 import Home from '../pages/Home/Home.vue';
 import WorkerAccount from '../pages/WorkerAccount/WorkerAccount.vue';
+import ProfileLayout from '../Layout/profileLayout.vue';
+import Profile from '../pages/Profile/Profile.vue';
 
 
 const routes = [
@@ -21,6 +23,17 @@ const routes = [
         path: '/worker-account',
         name: 'WorkerAccount',
         component: WorkerAccount,
+      }
+    ],
+  },
+  {
+    path: '/profile',
+    component: ProfileLayout,
+    children: [
+      {
+        path: '/profile',
+        name: 'Profile',
+        component: Profile,
       }
     ],
   },
