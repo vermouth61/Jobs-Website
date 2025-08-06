@@ -6,14 +6,15 @@ import { recentJobsArray } from '../../data';
 </script>
 
 <template>
-    <div class="flex flex-col items-center gap-[48px] px-[20px] lg:px-[100px] py-[45px]" dir="rtl">
+    <div class="flex flex-col items-center gap-[48px] bg-[#F2F7FF] px-[20px] lg:px-[100px] py-[40px]" dir="rtl">
         <div class="flex flex-col text-center gap-[14px]">
-            <h2 class="text-[#246BFD] text-[48px] font-[700]">الوظائف المٌضافة حديثاً</h2>
-            <p class="text-[24px] font-[400] text-[#68727D]">اكتشف أفضل الوظايف اللي تناسب مهاراتك العملية من أصحاب الورش والمصانع</p>
+            <h2 class="text-[#246BFD] text-[48px] font-[700]">الوظائف المتاحة</h2>
+           
         </div>
         <div class="flex flex-wrap justify-center 2xl:gap-[40px] gap-[20px]">
-            <RecentJobsCard v-for="job in recentJobsArray " :jobTitle="job.jobTitle" :location="job.location" :company="job.company" :dailyRate="job.dailyRate" :time="job.time"/>
+            <RecentJobsCard v-for="job in recentJobsArray " :jobTitle="job.jobTitle" :location="job.location" :company="job.company" :dailyRate="job.dailyRate" :field="job.field" :desires="job.desires"/>
         </div>
-        <Button extraClass="bg-[#666D80] hover:bg-[#36394A] text-white font-[600] h-[48px] w-[269px]">عرض المزيد من الوظائف</Button>
+        <Button buttonType="primary"
+      extraClass="font-[600] h-[48px] w-[178px]">شوف كل الوظائف</Button>
     </div>
 </template>

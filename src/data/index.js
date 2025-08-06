@@ -5,47 +5,53 @@ import { BsFillPlugFill } from "vue-icons-plus/bs";
 import { BiSolidWrench } from "vue-icons-plus/bi";
 export const recentJobsArray = [
   {
-    jobTitle: "فني لحام",
-    company: "شركة أوراسكوم",
-    dailyRate: 200,
-    time: "دوام جزئي",
-    location: "القاهرة",
-  },
+    jobTitle: "نجار أثاث منزلي ",
+    company: "ورشة الدمياطي",
+    dailyRate: 800,
+    field: "النجارة",
+    location: "الدقهلية",
+    desires:['مشروع بالاتفاق','مبتدئ']
+  }, 
   {
-    jobTitle: "فني لحام",
-    company: "شركة أوراسكوم",
-    dailyRate: 200,
-    time: "دوام جزئي",
-    location: "القاهرة",
-  },
+    jobTitle: "نجار أثاث منزلي ",
+    company: "ورشة الدمياطي",
+    dailyRate: 800,
+    field: "النجارة",
+    location: "الدقهلية",
+    desires:['مشروع بالاتفاق','مبتدئ']
+  }, 
   {
-    jobTitle: "فني لحام",
-    company: "شركة أوراسكوم",
-    dailyRate: 200,
-    time: "دوام جزئي",
-    location: "القاهرة",
-  },
+    jobTitle: "نجار أثاث منزلي ",
+    company: "ورشة الدمياطي",
+    dailyRate: 800,
+    field: "النجارة",
+    location: "الدقهلية",
+    desires:['مشروع بالاتفاق','مبتدئ']
+  }, 
   {
-    jobTitle: "فني لحام",
-    company: "شركة أوراسكوم",
-    dailyRate: 200,
-    time: "دوام جزئي",
-    location: "القاهرة",
-  },
+    jobTitle: "نجار أثاث منزلي ",
+    company: "ورشة الدمياطي",
+    dailyRate: 800,
+    field: "النجارة",
+    location: "الدقهلية",
+    desires:['مشروع بالاتفاق','مبتدئ']
+  }, 
   {
-    jobTitle: "فني لحام",
-    company: "شركة أوراسكوم",
-    dailyRate: 200,
-    time: "دوام جزئي",
-    location: "القاهرة",
-  },
+    jobTitle: "نجار أثاث منزلي ",
+    company: "ورشة الدمياطي",
+    dailyRate: 800,
+    field: "النجارة",
+    location: "الدقهلية",
+    desires:['مشروع بالاتفاق','مبتدئ']
+  }, 
   {
-    jobTitle: "فني لحام",
-    company: "شركة أوراسكوم",
-    dailyRate: 200,
-    time: "دوام جزئي",
-    location: "القاهرة",
-  },
+    jobTitle: "نجار أثاث منزلي ",
+    company: "ورشة الدمياطي",
+    dailyRate: 800,
+    field: "النجارة",
+    location: "الدقهلية",
+    desires:['مشروع بالاتفاق','مبتدئ']
+  }, 
 ];
 
 export const jobFieldsArray = [

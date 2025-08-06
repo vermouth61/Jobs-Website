@@ -5,20 +5,16 @@ import { LuBookMarked } from 'vue-icons-plus/lu';
 
 </script>
 <template>
-  <div dir="rtl" class="lg:py-[48px] px-[20px] lg:px-[100px]">
-    <div class="flex flex-col gap-[14px]">
+  <div dir="rtl" class="mt-[56px] py-[40px] px-[20px] lg:px-[100px]">
+    <div class="flex flex-col gap-[16px]">
       <h1 class="text-center text-[48px] font-[700] text-[#246BFD]">من نحن</h1>
-      <p class="text-center text-[32px] text-[#36394A]">
+      <p class="text-center text-[32px] text-[#666D80]">
         "معلمين" هو المكان اللي بيجمعك بأفضل الحرفيين في مصر <br>
         من أول سباك لنقّاش،
         تقدر تلاقي اللي إنت محتاجه بضغطة واحدة
       </p>
-      <p class="text-center text-[24px] text-[#68727D]">
-        هدفنا هو تمكين الحرفيين من عرض مهاراتهم بشكل احترافي، ومساعدة الناس في
-        الوصول لأفضل الحرفيين في مجالات مختلفة بسهولة وأمان.
-      </p>
     </div>
-    <div class="flex flex-wrap justify-center gap-[24px] md:justify-between mt-[32px] ">
+    <div class="flex flex-wrap justify-center gap-[24px] md:justify-between mt-[56px] ">
         <div class="flex flex-col mx-auto lg:mx-0 items-center gap-[24px] w-[354px]">
             <div class="p-[10px] w-fit shadow-[0px_16px_34px_rgba(73,131,233,0.30)] bg-[#5649FF] rounded-3xl">
                 <div class="p-[10px] bg-[#F6F8FA] rounded-full">

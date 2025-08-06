@@ -18,17 +18,17 @@ const accordionOpen = ref(open)
 </script>
 
 <template>
-  <div dir="rtl" class="p-[16px] ">
+  <div dir="rtl" class="p-[16px] bg-white rounded-2xl">
     <h2>
       <button
         id="accordion-title-01"
-        class="flex items-center justify-between w-full text-left font-semibold py-2"
+        class="flex items-center  cursor-pointer justify-between w-full text-left font-semibold py-2"
         @click.prevent="accordionOpen = !accordionOpen"
         :aria-expanded="accordionOpen"
         aria-controls="accordion-text-01"
       >
-        <span class="text-[22px]">{{ title }}</span>
-        <EpArrowLeft class="transform origin-center transition duration-200 ease-out" :class="{ '!rotate-90': accordionOpen }"/>
+        <span class="text-[22px]  cursor-pointer">{{ title }}</span>
+        <EpArrowLeft class="transform origin-center  cursor-pointer transition duration-200 ease-out" :class="{ '!rotate-90': accordionOpen }"/>
 
       </button>
     </h2>

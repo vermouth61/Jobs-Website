@@ -27,7 +27,7 @@ defineProps({
       {{ description }}
     </p>
     
-      <Button buttonType="green" extraClass="w-full font-[600]">وظائف {{ title }} المتاحة</Button>
+      <Button buttonType="outline" extraClass="w-full font-[600]">شوف الوظائف</Button>
     
   </div>
 </template>

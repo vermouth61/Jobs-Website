@@ -34,8 +34,8 @@ const searchHandler=()=>{
 
    
     <div class="flex w-full">
-        <MyInput type="text" extraClass="h-[60px] flex-2 border-none focus:outline-none rounded-l-none" v-model="search" placeholder="مثال : مندوب مبيعات"/>
-        <Button @clickButton="searchHandler" extraClass="h-[60px] flex-1 rounded-l-lg" buttonType="secondary">بحث وظائف خالية</Button>
+        <MyInput type="text" extraClass="h-[60px] flex-2 border-none focus:outline-none rounded-l-none" v-model="search" placeholder="مثال : سباك"/>
+        <Button @clickButton="searchHandler" extraClass="h-[60px] flex-1 rounded-r-none" buttonType="primary">بحث وظائف خالية</Button>
     </div>
     <p class="text-white text-[18px] font-[500] mt-1">“2804” وظيفة خالية</p>
   </div>
