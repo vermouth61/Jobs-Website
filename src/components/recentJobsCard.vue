@@ -4,9 +4,9 @@ import Button from "./ui/button.vue";
 import { FaBuilding, FaTools } from "vue-icons-plus/fa";
 import { Fa6MoneyCheckDollar } from "vue-icons-plus/fa6";
 import { BsBookmark, BsBookmarkFill, BsFillClockFill } from "vue-icons-plus/bs";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import Badge from "./ui/badge.vue";
-defineProps({
+const { jobTitle, company, location,id, dailyRate, field, desires } = defineProps({
   jobTitle: {
     type: String,
     required: true,
@@ -31,10 +31,40 @@ defineProps({
     type: Array,
     required: true,
   },
+  id: {
+    type: Number,
+    required: true,
+  },
 });
+const savedJobs = ref([]);
 const saved = ref(false);
+onMounted(() => {
+  savedJobs.value = JSON.parse(localStorage.getItem("savedJobs")) || [];
+  if (savedJobs.value.find((job) => job.id === id)) {
+    saved.value = true;
+  }
+})
 const saveHandler = () => {
   saved.value = !saved.value;
+  if (saved.value) {
+    savedJobs.value = JSON.parse(localStorage.getItem("savedJobs")) || [];
+    savedJobs.value.push({
+      jobTitle: jobTitle,
+      company: company,
+      location: location,
+      dailyRate: dailyRate,
+      field: field,
+      desires: desires,
+      id:id
+    });
+    localStorage.setItem("savedJobs", JSON.stringify(savedJobs.value));
+  } else {
+    savedJobs.value = JSON.parse(localStorage.getItem("savedJobs")) || [];
+    savedJobs.value = savedJobs.value.filter(
+      (job) => job.jobTitle !== jobTitle
+    );
+    localStorage.setItem("savedJobs", JSON.stringify(savedJobs.value));
+  }
 };
 </script>
 <template>

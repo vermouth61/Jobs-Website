@@ -10,7 +10,10 @@ import { RiFacebookFill, RiTwitterXFill } from "vue-icons-plus/ri";
 </script>
 <template>
   <div class="bg-black py-[64px]">
-    <div dir="rtl" class="flex flex-wrap gap-5 justify-between px-[20px] lg:px-[100px] mb-[45px] items-start">
+    <div class="container mx-auto">
+
+    
+    <div dir="rtl" class="flex flex-wrap gap-5 justify-between mb-[45px] items-start">
       <div class="flex flex-col w-[392px] gap-[21px]">
         <div>
           <img src="../assets/logo.svg" alt="LOGO" />
@@ -54,7 +57,7 @@ import { RiFacebookFill, RiTwitterXFill } from "vue-icons-plus/ri";
         </ul>
       </div>
     </div>
-    <div dir="rtl" class="py-[24px] mx-[40px] border-1 border-t-[#AD9B9B] md:ps-[65px] md:pe-[100px] flex flex-col items-center gap-3 md:flex-row md:justify-between">
+    <div dir="rtl" class="py-[24px] border-1 border-t-[#AD9B9B] flex flex-col items-center gap-3 md:flex-row md:justify-between">
         <ul class="flex text-gray-300 gap-[10px]">
             <li><BiLogoLinkedin /></li>
             <li><Fa6Instagram /></li>
@@ -62,6 +65,7 @@ import { RiFacebookFill, RiTwitterXFill } from "vue-icons-plus/ri";
             <li><RiTwitterXFill /></li>
         </ul>
         <h3 class="text-[18px] text-white">© حقوق الطبع والنشر محفوظة 2025 لمنصة معلمين </h3>
+    </div>
     </div>
   </div>
 </template>
