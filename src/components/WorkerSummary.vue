@@ -28,7 +28,7 @@ defineProps({
     <div dir="rtl" class="flex p-[24px] bg-[#F6F8FA] rounded-[8px] border-[1px] border-[#B8BCC7] w-full mx-auto ">
         <div class="flex items-center gap-[16px] w-full">
             <div>
-                <img src="../assets/profile/person.jpg" alt="Person" class="w-[200px] h-[200px] rounded-[8px] object-cover" />
+                <img src="../assets/profile/human-croped.jpg" alt="Person" class="w-[200px] h-[200px] rounded-[8px] object-cover"/>
             </div>
             <div class="flex justify-between items-end lg:items-start flex-col lg:flex-row gap-[16px] w-full">
                 <div class="flex-3">
@@ -37,7 +37,7 @@ defineProps({
                     <p class="text-[18px] font-[400] text-[#4B5563] mt-[12px]">{{ workerDescription }}</p>
                 </div>
                 <div class="flex-1" v-if="withButton">
-                    <a href="../../assets/resume/MohamedDiaa-Resume.pdf" download="MohamedDiaa-Resume.pdf">
+                    <a href="/resume/MohamedDiaa-Resume.pdf" download="MohamedDiaa-Resume.pdf">
                         <Button buttonType="primary" extraClass=" flex gap-[8px] items-center text-[16px]">
                             <Io5CloudDownloadSharp class="w-[20px]"/>
                             تحميل السيرة الذاتية
