@@ -1,8 +1,7 @@
 <script setup>
 import RecentJobsCard from '../../components/recentJobsCard.vue';
 import Button from '../../components/ui/button.vue';
-import { recentJobsArray } from '../../data';
-
+import data from "../../data/data.json";
 </script>
 
 <template>
@@ -12,7 +11,7 @@ import { recentJobsArray } from '../../data';
            
         </div>
         <div class="flex flex-wrap justify-center 2xl:gap-[40px] gap-[20px]">
-            <RecentJobsCard v-for="job in recentJobsArray " :jobTitle="job.jobTitle" :location="job.location" :company="job.company" :dailyRate="job.dailyRate" :field="job.field" :desires="job.desires"/>
+            <RecentJobsCard v-for="job in data.recentJobsArray " :key="job.id" :id="job.id" :jobTitle="job.jobTitle" :location="job.location" :company="job.company" :dailyRate="job.dailyRate" :field="job.field" :desires="job.desires"/>
         </div>
         <Button buttonType="primary"
       extraClass="font-[600] h-[48px] w-[178px]">شوف كل الوظائف</Button>
