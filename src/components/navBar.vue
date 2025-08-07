@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import Button from "./ui/button.vue";
-const token = ref("");
+const token = ref(false);
 onMounted(() => {
-  token.value = localStorage.getItem("userToken");
+  token.value =  !!localStorage.getItem("userToken");
 })
 </script>
 
