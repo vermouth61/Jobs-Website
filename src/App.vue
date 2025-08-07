@@ -1,9 +1,11 @@
 <script setup></script>
 
 <template>
-  <transition name="fade" mode="default">
-    <router-view />
-  </transition>
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="default">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style>
@@ -13,6 +15,6 @@
 }
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 50%;
+  opacity: 60%;
 }
 </style>
