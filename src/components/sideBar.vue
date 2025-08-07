@@ -7,7 +7,12 @@ import { Io5SettingsSharp } from 'vue-icons-plus/io5';
 import Button from './ui/button.vue';
 import { AiOutlineMenuFold } from 'vue-icons-plus/ai';
 import { HiMiniUserGroup } from 'vue-icons-plus/hi2';
-
+import { useRouter } from 'vue-router';
+const router = useRouter();
+const logout = () => {
+    localStorage.removeItem('userToken');
+    router.push('/');
+}
 </script>
 
 <template>
@@ -60,7 +65,7 @@ import { HiMiniUserGroup } from 'vue-icons-plus/hi2';
         </span>
     </router-link>
     <div class="w-full"> 
-        <Button buttonType="secondary" @clickButton="$emit('logout') " extraClass="w-full text-start rounded-[12px] px-[20px] flex gap-[8px]">
+        <Button buttonType="secondary" @clickButton="logout" extraClass="w-full text-start rounded-[12px] px-[20px] flex gap-[8px]">
             <TbLogout2 class="inline-block w-[22px]"/>
             تسجيل الخروج
         </Button>
