@@ -7,7 +7,7 @@ import Home from '../pages/Home/Home.vue';
 import WorkerAccount from '../pages/WorkerAccount/WorkerAccount.vue';
 import ProfileLayout from '../Layout/profileLayout.vue';
 import Profile from '../pages/Profile/Profile.vue';
-
+import authService from '../services/authService.js';
 
 const routes = [
   {
@@ -23,29 +23,33 @@ const routes = [
         path: '/worker-account',
         name: 'WorkerAccount',
         component: WorkerAccount,
-      }
+        meta: { requiresAuth: true },
+      },
     ],
   },
   {
     path: '/profile',
     component: ProfileLayout,
+    meta: { requiresAuth: true },
     children: [
       {
         path: '/profile',
         name: 'Profile',
         component: Profile,
-      }
+      },
     ],
   },
   {
     path: '/login',
     name: 'Login',
     component: Login,
+    meta: { requiresGuest: true },
   },
   {
     path: '/signup',
     name: 'Signup',
     component: Signup,
+    meta: { requiresGuest: true },
   },
   {
     path: '/:pathMatch(.*)*',
@@ -57,6 +61,25 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+// Navigation guards
+router.beforeEach((to, from, next) => {
+  const isLoggedIn = authService.isLoggedIn();
+
+  // Routes that require authentication
+  if (to.meta.requiresAuth && !isLoggedIn) {
+    next('/login');
+    return;
+  }
+
+  // Routes that require guest (not logged in)
+  if (to.meta.requiresGuest && isLoggedIn) {
+    next('/');
+    return;
+  }
+
+  next();
 });
 
 export default router;

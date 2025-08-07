@@ -1,10 +1,8 @@
 <script setup>
-import { onMounted, ref } from "vue";
-import Button from "./ui/button.vue";
-const token = ref(false);
-onMounted(() => {
-  token.value =  !!localStorage.getItem("userToken");
-})
+import Button from './ui/button.vue';
+import { useAuth } from '../composables/useAuth.js';
+
+const { currentUser, isLoggedIn, logout } = useAuth();
 </script>
 
 <template>
@@ -19,14 +17,34 @@ onMounted(() => {
 
       <input id="menu-toggle" type="checkbox" class="peer hidden" />
       <div class="flex items-center gap-3 lg:hidden">
-         <router-link v-if="!token" to="/login">
-          <Button buttonType="primary">تسجيل الدخول</Button>
-        </router-link>
-        <div v-if="token" @click="$router.push('/profile')" class="p-2 flex items-center cursor-pointer hover:bg-[#B8BCC7] border-[1px] duration-300 border-[#B8BCC7] rounded-[32px] gap-2">
-          <div class="w-[34px]">
-            <img class="rounded-full h-[34px] object-cover" src="../assets/peoples/avatar.jpg" alt="">
-          </div>
-          <h3 class="text-[18px] font-400">أهلاً، محمد</h3>
+        <div v-if="!isLoggedIn">
+          <router-link to="/login">
+            <Button extraClass="text-sm" buttonType="primary"
+              >تسجيل الدخول</Button
+            >
+          </router-link>
+        </div>
+        <div v-else class="flex items-center gap-2">
+          <router-link
+            to="/profile"
+            class="flex items-center gap-2 bg-white rounded-full px-3 py-1 hover:bg-gray-50 transition-colors border border-gray-200"
+          >
+            <span class="text-sm text-gray-700 font-medium"
+              >أهلاً، {{ currentUser?.firstName }}</span
+            >
+            <div
+              class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold text-xs"
+            >
+              {{ currentUser?.firstName?.charAt(0)
+              }}{{ currentUser?.lastName?.charAt(0) }}
+            </div>
+          </router-link>
+          <Button
+            @click="logout"
+            extraClass="text-sm rounded-lg"
+            buttonType="secondary"
+            >تسجيل الخروج</Button
+          >
         </div>
 
         <label
@@ -66,39 +84,82 @@ onMounted(() => {
         </router-link>
 
         <router-link
-          to="/available-jobs"
+          to="/contact"
           class="group relative p-[10px] duration-300"
           exact-active-class="pointer-events-none text-[#246BFD] font-[700] lg:border-b-[1.5px] lg:border-[#246BFD]"
         >
           <span
             class="before:absolute before:bg-[#246BFD] before:content-[''] before:rounded-lg before:w-0 before:h-[1px] before:translate-y-[34px] before:translate-x-[10px] lg:group-hover:before:w-full before:duration-500 group-hover:text-[#246BFD]"
           >
-            الوظائف المتاحة
+            بحث وظائف خالية
           </span>
         </router-link>
 
         <router-link
-          to="/learning"
+          to="/fields"
           class="group relative p-[10px] duration-300"
           exact-active-class="pointer-events-none text-[#246BFD] font-[700] lg:border-b-[1.5px] lg:border-[#246BFD]"
         >
           <span
             class="before:absolute before:bg-[#246BFD] before:content-[''] before:rounded-lg before:w-0 before:h-[1px] before:translate-y-[34px] before:translate-x-[10px] lg:group-hover:before:w-full before:duration-500 group-hover:text-[#246BFD]"
           >
-            وِرش تعليمية
+            وظائف حسب المجال
+          </span>
+        </router-link>
+
+        <router-link
+          to="/governorates"
+          class="group relative p-[10px] duration-300"
+          exact-active-class="pointer-events-none text-[#246BFD] font-[700] lg:border-b-[1.5px] lg:border-[#246BFD]"
+        >
+          <span
+            class="before:absolute before:bg-[#246BFD] before:content-[''] before:rounded-lg before:w-0 before:h-[1px] before:translate-y-[34px] before:translate-x-[10px] lg:group-hover:before:w-full before:duration-500 group-hover:text-[#246BFD]"
+          >
+            وظائف المحافظات
+          </span>
+        </router-link>
+
+        <!-- Profile link for logged in users -->
+        <router-link
+          v-if="isLoggedIn"
+          to="/profile"
+          class="group relative p-[10px] duration-300 lg:hidden"
+          exact-active-class="pointer-events-none text-[#246BFD] font-[700] lg:border-b-[1.5px] lg:border-[#246BFD]"
+        >
+          <span
+            class="before:absolute before:bg-[#246BFD] before:content-[''] before:rounded-lg before:w-0 before:h-[1px] before:translate-y-[34px] before:translate-x-[10px] lg:group-hover:before:w-full before:duration-500 group-hover:text-[#246BFD]"
+          >
+            الملف الشخصي
           </span>
         </router-link>
       </div>
 
       <div class="hidden lg:flex gap-[14px]" dir="rtl">
-        <router-link v-if="!token" to="/login">
-          <Button buttonType="primary">تسجيل الدخول</Button>
-        </router-link>
-        <div v-if="token" @click="$router.push('/profile')" class="p-2 flex items-center cursor-pointer hover:bg-[#B8BCC7] border-[1px] duration-300 border-[#B8BCC7] rounded-[32px] gap-2">
-          <div class="w-[34px]">
-            <img class="rounded-full h-[34px] object-cover" src="../assets/peoples/avatar.jpg" alt="">
-          </div>
-          <h3 class="text-[18px] font-400">أهلاً، محمد</h3>
+        <div v-if="!isLoggedIn">
+          <router-link to="/login">
+            <Button buttonType="primary">تسجيل الدخول</Button>
+          </router-link>
+        </div>
+        <div v-else class="flex items-center gap-4">
+          <router-link
+            to="/profile"
+            class="flex items-center gap-3 bg-white rounded-full px-4 py-2 hover:bg-gray-50 transition-colors border border-gray-200"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-gray-700 font-medium"
+                >أهلاً، {{ currentUser?.firstName }}</span
+              >
+              <div
+                class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold text-sm"
+              >
+                {{ currentUser?.firstName?.charAt(0)
+                }}{{ currentUser?.lastName?.charAt(0) }}
+              </div>
+            </div>
+          </router-link>
+          <Button @click="logout" buttonType="secondary" extraClass="rounded-lg"
+            >تسجيل الخروج</Button
+          >
         </div>
       </div>
     </div>
