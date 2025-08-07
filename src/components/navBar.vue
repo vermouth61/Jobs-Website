@@ -5,8 +5,11 @@ import Button from './ui/button.vue';
 <template>
   <nav
     dir="rtl"
-    class="bg-[rgba(255,255,255,0.80)] px-[20px] sticky z-10 top-0 xl:px-[100px] lg:px-[78px] py-[14px] flex flex-wrap justify-between items-center backdrop-blur-[9px]"
+    class="bg-[rgba(255,255,255,0.80)] sticky z-10 top-0  py-[14px]  backdrop-blur-[9px]"
   >
+  <div class="container mx-auto flex flex-wrap justify-between items-center">
+
+
     <router-link to="/">
       <img src="../assets/logo.svg" alt="logo" />
     </router-link>
@@ -95,5 +98,6 @@ import Button from './ui/button.vue';
         <Button buttonType="primary">تسجيل الدخول</Button>
       </router-link>
     </div>
+      </div>
   </nav>
 </template>
