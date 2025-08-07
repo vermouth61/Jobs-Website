@@ -1,6 +1,6 @@
 <script setup>
-import Button from './ui/button.vue';
-import { useAuth } from '../composables/useAuth.js';
+import Button from "./ui/button.vue";
+import { useAuth } from "../composables/useAuth.js";
 
 const { currentUser, isLoggedIn, logout } = useAuth();
 </script>
@@ -84,38 +84,26 @@ const { currentUser, isLoggedIn, logout } = useAuth();
         </router-link>
 
         <router-link
-          to="/contact"
+          to="/jobs"
           class="group relative p-[10px] duration-300"
           exact-active-class="pointer-events-none text-[#246BFD] font-[700] lg:border-b-[1.5px] lg:border-[#246BFD]"
         >
           <span
             class="before:absolute before:bg-[#246BFD] before:content-[''] before:rounded-lg before:w-0 before:h-[1px] before:translate-y-[34px] before:translate-x-[10px] lg:group-hover:before:w-full before:duration-500 group-hover:text-[#246BFD]"
           >
-            بحث وظائف خالية
+            الوظائف المتاحة
           </span>
         </router-link>
 
         <router-link
-          to="/fields"
+          to="/learning"
           class="group relative p-[10px] duration-300"
           exact-active-class="pointer-events-none text-[#246BFD] font-[700] lg:border-b-[1.5px] lg:border-[#246BFD]"
         >
           <span
             class="before:absolute before:bg-[#246BFD] before:content-[''] before:rounded-lg before:w-0 before:h-[1px] before:translate-y-[34px] before:translate-x-[10px] lg:group-hover:before:w-full before:duration-500 group-hover:text-[#246BFD]"
           >
-            وظائف حسب المجال
-          </span>
-        </router-link>
-
-        <router-link
-          to="/governorates"
-          class="group relative p-[10px] duration-300"
-          exact-active-class="pointer-events-none text-[#246BFD] font-[700] lg:border-b-[1.5px] lg:border-[#246BFD]"
-        >
-          <span
-            class="before:absolute before:bg-[#246BFD] before:content-[''] before:rounded-lg before:w-0 before:h-[1px] before:translate-y-[34px] before:translate-x-[10px] lg:group-hover:before:w-full before:duration-500 group-hover:text-[#246BFD]"
-          >
-            وظائف المحافظات
+            وِرش تعليمية
           </span>
         </router-link>
 
