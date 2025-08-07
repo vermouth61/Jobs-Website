@@ -32,16 +32,12 @@ import { RiFacebookFill, RiTwitterXFill } from "vue-icons-plus/ri";
           <ul class="flex flex-col text-[#B8BCC7] gap-[14px]">
             <li><router-link to="/">الرئيسية</router-link></li>
             <li><router-link to="/about">من نحن</router-link></li>
-            <li><router-link to="/jobs">وظائف حسب المجال</router-link></li>
+            <li><router-link to="/jobs">الوظائف المتاحة</router-link></li>
             <li><router-link to="/faqs">أسئلة شائعة</router-link></li>
           </ul>
           <ul class="flex flex-col text-[#B8BCC7] gap-[14px]">
             <li><router-link to="/login">تسجيل الدخول</router-link></li>
-            <li><router-link to="/jobsSearch">بحث وظائف خالية</router-link></li>
-            <li>
-              <router-link to="/jobsGovernorates">وظائف المحافظات</router-link>
-            </li>
-            <li><router-link to="/privacy">أسئلة شائعة</router-link></li>
+            <li><router-link to="/jobsSearch">حساب جديد</router-link></li>
           </ul>
         </div>
       </div>
