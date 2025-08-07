@@ -13,7 +13,7 @@ import { workerRatingArray } from '../../data/index.js';
 </script>
 
 <template>
-    <div dir="rtl" class="px-[24px] sm:px-[48px] md:px-[64px] lg:px-[100px] pt-[24px]">
+    <div dir="rtl" class="px-[20px] lg:px-[100px] pt-[24px]">
         <div class="mb-[24px]">
         <WorkerSummary  workerName="أحمد محمد الشرقاوي" workerPosition="لحام أرجون و كهرباء" workerDescription="فني لحام محترف بخبرة 5 سنوات في اللحام الكهربائي ولحام الأرجون. أتميّز بدقة عالية في العمل، وحرص دائم على السلامة والجودة في تنفيذ المهام." withButton="true"/>
         </div>
