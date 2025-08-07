@@ -3,89 +3,45 @@ import { Fa6Hammer, Fa6Trowel } from "vue-icons-plus/fa6";
 import { IpHammerAndAnvil } from "vue-icons-plus/ip";
 import { BsFillPlugFill } from "vue-icons-plus/bs";
 import { BiSolidWrench } from "vue-icons-plus/bi";
-export const recentJobsArray = [
-  {
-    jobTitle: "نجار أثاث منزلي ",
-    company: "ورشة الدمياطي",
-    dailyRate: 800,
-    field: "النجارة",
-    location: "الدقهلية",
-    desires:['مشروع بالاتفاق','مبتدئ']
-  }, 
-  {
-    jobTitle: "نجار أثاث منزلي ",
-    company: "ورشة الدمياطي",
-    dailyRate: 800,
-    field: "النجارة",
-    location: "الدقهلية",
-    desires:['مشروع بالاتفاق','مبتدئ']
-  }, 
-  {
-    jobTitle: "نجار أثاث منزلي ",
-    company: "ورشة الدمياطي",
-    dailyRate: 800,
-    field: "النجارة",
-    location: "الدقهلية",
-    desires:['مشروع بالاتفاق','مبتدئ']
-  }, 
-  {
-    jobTitle: "نجار أثاث منزلي ",
-    company: "ورشة الدمياطي",
-    dailyRate: 800,
-    field: "النجارة",
-    location: "الدقهلية",
-    desires:['مشروع بالاتفاق','مبتدئ']
-  }, 
-  {
-    jobTitle: "نجار أثاث منزلي ",
-    company: "ورشة الدمياطي",
-    dailyRate: 800,
-    field: "النجارة",
-    location: "الدقهلية",
-    desires:['مشروع بالاتفاق','مبتدئ']
-  }, 
-  {
-    jobTitle: "نجار أثاث منزلي ",
-    company: "ورشة الدمياطي",
-    dailyRate: 800,
-    field: "النجارة",
-    location: "الدقهلية",
-    desires:['مشروع بالاتفاق','مبتدئ']
-  }, 
-];
 
 export const jobFieldsArray = [
   {
+    id:1,
     field: "السباكة",
     description:
       "شغل في تركيب وصيانة أنظمة المياه والصرف في المباني السكنية والتجارية والمواقع",
     icon: GiValve,
   },
   {
+    id:2,
     field: "النجارة",
     description:
       "شغل في تصنيع الأثاث، الديكورات الخشبية، أو أعمال النجارة في المشاريع السكنية والتجارية.",
     icon: Fa6Hammer,
   },
   {
+    id:3,
     field: "المقاولات و البناء",
     description:
       "شغل في بناء المباني السكنية والتجارية بجودة ممتازة وإدارة مشاريع البناء بأدوات حديثة",
     icon: Fa6Trowel,
   },
   {
+    id:4,
     field: "تشكيل المعادن",
     description:
       "لحام وتشكيل المعادن للمشاريع الصناعية والإنشائية وتنفيذ هياكل معدنية بكفاءة عالية.",
     icon: IpHammerAndAnvil,
   },
   {
+    id:5,
     field: "الكهرباء",
     description:
       "تركيب وصيانة الأنظمة الكهربائية للمباني والمصانع وتنفيذ أعمال كهرباء آمنة",
     icon: BsFillPlugFill,
   },
   {
+    id:6,
     field: "صيانة الآلات",
     description:
       "إصلاح و صيانة الآلات الصناعية و المعدات الثقيلة و تحسين أداء الورش بدعم فنيين ممتازين",
