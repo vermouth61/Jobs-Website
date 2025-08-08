@@ -14,7 +14,7 @@ const handleJobRemoved = (jobId) => {
 </script>
 
 <template>
-    <div>
+    <div class="w-full">
         <h1 dir="rtl" class="text-[#246BFD] text-[32px] font-[600] mb-[24px]">الوظائف المحفوظة</h1>
     
         <div class="flex flex-wrap justify-center xl:justify-start gap-[20px]">

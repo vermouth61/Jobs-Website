@@ -10,7 +10,7 @@ import WorkerContact from './WorkerContact.vue';
 </script>
 
 <template>
-   <div dir="rtl" class="flex flex-col gap-[20px] flex-wrap justify-center lg:justify-start">
+   <div dir="rtl" class="flex flex-col gap-[20px] flex-wrap justify-center lg:justify-start w-full">
       <div class="flex gap-[20px] flex-wrap justify-center lg:justify-start">
          <div class="flex flex-col gap-[20px] flex-2">
                <WorkerSummary workerName="أحمد محمد الشرقاوي" 
