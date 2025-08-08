@@ -22,7 +22,7 @@ import { RiFacebookFill, RiTwitterXFill } from "vue-icons-plus/ri";
           "معلمين" هو المكان اللي بيجمعك بأفضل الحرفيين في مصر من أول سباك
           لنقّاش، تقدر تلاقي اللي إنت محتاجه بضغطة واحدة
         </h5>
-        <Button extraClass="w-[164px] h-[40px]" buttonType="primary"
+        <Button @clickButton="$router.push('/jobs')" extraClass="w-[164px] h-[40px]" buttonType="primary"
           >استكشف الوظائف</Button
         >
       </div>
