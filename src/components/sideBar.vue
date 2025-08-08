@@ -16,7 +16,7 @@ const logout = () => {
 </script>
 
 <template>
-<div dir="rtl" class="bg-[#F6F8FA] lg:border-[1px] lg:border-[#B8BCC7] lg:rounded-[8px] px-[16px] py-[12px] lg:py-[24px] w-full lg:w-[295px] flex flex-col gap-[16px]">
+<div dir="rtl" class="bg-[#F6F8FA] lg:border-[1px] lg:border-[#B8BCC7] lg:rounded-[8px] px-[16px] py-[12px] lg:py-[24px] w-full lg:w-[400px] flex flex-col gap-[16px]">
         <input id="side-toggle" type="checkbox" class="peer hidden" />
     <div class="flex items-center gap-3 lg:hidden">
 
