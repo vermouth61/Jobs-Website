@@ -2,11 +2,17 @@
 import { ref } from "vue";
 import MyInput from "../../components/ui/MyInput.vue";
 import Button from "../../components/ui/button.vue";
+import { useRouter } from "vue-router";
 
 const search=ref('')
-
+const router = useRouter();
 const searchHandler=()=>{
-    // Handler
+    if(search.value.trim()){
+      router.push({name:'Jobs',query:{search:search.value}})
+    }
+    else{
+      router.push({name:'Jobs'})
+    }
 }
 
 </script>
@@ -34,7 +40,7 @@ const searchHandler=()=>{
 
    
     <div class="flex w-full">
-        <MyInput type="text" extraClass="h-[60px] flex-2 border-none focus:outline-none rounded-l-none" v-model="search" placeholder="مثال : سباك"/>
+        <MyInput @keyup.enter="searchHandler" type="text" extraClass="h-[60px] flex-2 border-none focus:outline-none rounded-l-none" v-model="search" placeholder="مثال : سباك"/>
         <Button @clickButton="searchHandler" extraClass="h-[60px] flex-1 rounded-r-none" buttonType="primary">بحث وظائف خالية</Button>
     </div>
     <p class="text-white text-[18px] font-[500] mt-1">“2804” وظيفة خالية</p>
