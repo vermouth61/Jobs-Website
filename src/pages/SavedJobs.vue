@@ -1,10 +1,16 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import RecentJobsCard from '../components/recentJobsCard.vue';
+import { getSavedJobs } from '../utils';
 const savedJobs = ref([]);
+
 onMounted(() => {
-    savedJobs.value = JSON.parse(localStorage.getItem('savedJobs')) || [];
-})
+    savedJobs.value = getSavedJobs();
+});
+const handleJobRemoved = (jobId) => {
+  savedJobs.value = savedJobs.value.filter((job) => job.id !== jobId);
+}
+
 </script>
 
 <template>
@@ -13,6 +19,7 @@ onMounted(() => {
     
         <div class="flex flex-wrap justify-center xl:justify-start gap-[20px]">
               <RecentJobsCard
+              @jobRemoved="handleJobRemoved"
                 class="w-[358px]! h-fit"
                 v-if="savedJobs.length"
                 v-for="job in savedJobs"
