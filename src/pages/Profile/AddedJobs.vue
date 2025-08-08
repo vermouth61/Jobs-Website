@@ -4,10 +4,11 @@
 </script>
 
 <template>
+<div>
         <div class="flex flex-col gap-[24px]">
-            <h2 class="text-[##000000] text-[24px] font-[500]">الوظائف اللي قدمت عليها</h2>
+            <h2 class="text-[##000000] text-[24px] font-[500]">الوظائف المُضافة</h2>
             <div class="flex flex-wrap gap-[20px] justify-center ">
-                <RecentJobsCard v-for="job in data.userAppliedJobs"
+                <RecentJobsCard v-for="job in data.userAddedJobs"
                                 :jobTitle="job.jobTitle"
                                 :location="job.location"
                                 :company="job.company"
@@ -18,4 +19,5 @@
                                 :key="job.id"/>
             </div>
         </div>
+</div>
 </template>

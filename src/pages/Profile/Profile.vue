@@ -2,6 +2,7 @@
 import WorkerExperience from '../../components/WorkerExperience.vue';
 import WorkerSummary from '../../components/WorkerSummary.vue';
 import { workerExperienceArray } from '../../data/index.js';
+import AddedJobs from './AddedJobs.vue';
 import AppliedJobs from './AppliedJobs.vue';
 import WorkerContact from './WorkerContact.vue';
 
@@ -25,6 +26,9 @@ import WorkerContact from './WorkerContact.vue';
       </div>
       <div class="bg-[#F6F8FA] p-[24px] rounded-lg border-[1px] border-[#B8BCC7]">
          <AppliedJobs/>
+      </div>
+      <div class="bg-[#F6F8FA] p-[24px] rounded-lg border-[1px] border-[#B8BCC7]">
+         <AddedJobs />
       </div>
    </div>
 </template>
