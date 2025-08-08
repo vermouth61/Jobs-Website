@@ -37,7 +37,7 @@ const { jobTitle, company, location,id, dailyRate, field, desires } = defineProp
   },
   status: {
     type: String,
-    required: true,
+    required: false,
   }
 });
 const savedJobs = ref([]);

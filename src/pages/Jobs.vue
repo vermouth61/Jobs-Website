@@ -12,7 +12,7 @@ import { fields, governorates, levels, salaries } from "../data";
 const route = useRoute();
 const allJobs = ref(data.recentJobsArray);
 const search = ref("");
-const debouncedSearch = ref(""); // new
+const debouncedSearch = ref("");
 const selectedField = ref("");
 const selectedGovernorate = ref("");
 const selectedLevel = ref("");
@@ -24,6 +24,10 @@ onMounted(() => {
         search.value = route.query.search;
         debouncedSearch.value = route.query.search;
     }
+    if (route.query.field) {
+        debouncedSearch.value = route.query.field;
+    }
+     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 const filteredJobs = ref([]);
 
@@ -36,7 +40,7 @@ const filterJobs = () => {
     const matchesSearch =
       !debouncedSearch.value ||
       tags.includes(debouncedSearch.value) ||
-      title.includes(debouncedSearch.value);
+      title.includes(debouncedSearch.value)||debouncedSearch.value.includes(title);
 
     const matchesField =
       !selectedField.value ||
