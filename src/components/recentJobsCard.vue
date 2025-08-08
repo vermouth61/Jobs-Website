@@ -35,6 +35,10 @@ const { jobTitle, company, location,id, dailyRate, field, desires } = defineProp
     type: Number,
     required: true,
   },
+  status: {
+    type: String,
+    required: true,
+  }
 });
 const savedJobs = ref([]);
 const saved = ref(false);
@@ -76,6 +80,8 @@ const saveHandler = () => {
       <div class="flex flex-col gap-[8px]">
         <div class="flex flex-row items-center justify-between">
           <h3 class="font-[500] py-[10px] text-[24px]">{{ jobTitle }}</h3>
+          <Badge v-if="status" :title="status" />
+          <div v-else>
           <BsBookmark
             class="cursor-pointer"
             v-if="!saved"
@@ -86,6 +92,7 @@ const saveHandler = () => {
             v-else
             @click="saveHandler"
           />
+          </div>
         </div>
         <div class="flex flex-row gap-[66px]">
           <ul class="flex flex-col gap-[8px]">

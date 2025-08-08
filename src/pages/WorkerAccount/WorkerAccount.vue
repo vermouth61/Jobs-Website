@@ -13,7 +13,7 @@ import { workerRatingArray } from '../../data/index.js';
 </script>
 
 <template>
-    <div dir="rtl" class="px-[20px] lg:px-[100px] pt-[24px]">
+    <div dir="rtl" class="container mx-auto pt-[24px]">
         <div class="mb-[24px]">
         <WorkerSummary  workerName="أحمد محمد الشرقاوي" workerPosition="لحام أرجون و كهرباء" workerDescription="فني لحام محترف بخبرة 5 سنوات في اللحام الكهربائي ولحام الأرجون. أتميّز بدقة عالية في العمل، وحرص دائم على السلامة والجودة في تنفيذ المهام." withButton="true"/>
         </div>
@@ -25,22 +25,22 @@ import { workerRatingArray } from '../../data/index.js';
             <WorkerExperience :workerExperience="workerExperienceArray"/>
         </div>
 
-    <div class="mt-[24px] flex flex-col items-center lg:items-start">
+    <div class="mt-[24px] flex flex-col items-center xl:items-start">
         <div>
             <h1 class="text-[#1F2937] text-[20px] font-[500] flex items-center">
                 <FaFolderOpen class="inline-block text-[#246BFD] me-[8px]"/>اطلع على اعمالي</h1>
         </div>
-        <div class="mt-[16px] flex gap-[20px] flex-wrap justify-center lg:justify-start">
+        <div class="mt-[16px] flex gap-[20px] flex-wrap justify-center xl:justify-start">
             <PortfolioCard v-for="(workerPortfolio, index) in workerPortfolioArray.slice(0, 4)" :key="index" :workerPortfolio="workerPortfolio" />
         </div>
         </div>
     
-    <div class="mt-[24px] mb-[128px] flex flex-col items-center lg:items-start">
+    <div class="mt-[24px] mb-[128px] flex flex-col items-center xl:items-start">
         <div>
             <h1 class="text-[#1F2937] text-[20px] font-[500] flex items-center">
                 <AiFillStar class="inline-block text-[#246BFD] me-[8px]"/>التقييمات</h1>
         </div>
-        <div class="mt-[16px] flex gap-[20px] flex-wrap justify-center lg:justify-start">
+        <div class="mt-[16px] flex gap-[20px] flex-wrap justify-center xl:justify-start">
             <RatingCard v-for="(workerRating, index) in workerRatingArray" :key="index" :workerRating="workerRating"/>
         </div>
     </div>

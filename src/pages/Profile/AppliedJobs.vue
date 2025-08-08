@@ -7,7 +7,7 @@
          <div class="flex flex-col gap-[24px]">
             <h2 class="text-[##000000] text-[24px] font-[500]">الوظائف اللي قدمت عليها</h2>
             <div class="flex flex-wrap gap-[20px] justify-center ">
-            <RecentJobsCard v-for="(job, key) in data.recentJobsArray.splice(0, 4)" :jobTitle="job.jobTitle" :location="job.location" :company="job.company" :dailyRate="job.dailyRate" :field="job.field" :desires="job.desires" :key="key"/>
+            <RecentJobsCard v-for="job in data.userAppliedJobs" :jobTitle="job.jobTitle" :location="job.location" :company="job.company" :dailyRate="job.dailyRate" :field="job.field" :desires="job.desires" :status="job.status" :key="job.id"/>
             </div>
          </div>
 </template>
