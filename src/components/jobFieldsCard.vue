@@ -27,7 +27,7 @@ defineProps({
       {{ description }}
     </p>
     
-      <Button buttonType="outline" extraClass="w-full font-[600]">شوف الوظائف</Button>
+      <Button buttonType="outline" @clickButton="$router.push({ name: 'Jobs', query: { field: title }})" extraClass="w-full font-[600]">شوف الوظائف</Button>
     
   </div>
 </template>
