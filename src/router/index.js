@@ -9,6 +9,7 @@ import ProfileLayout from '../Layout/profileLayout.vue';
 import Profile from '../pages/Profile/Profile.vue';
 import authService from '../services/authService.js';
 import Jobs from '../pages/Jobs.vue';
+import Workshops from '../pages/Workshops.vue';
 
 const routes = [
   {
@@ -26,12 +27,16 @@ const routes = [
         component: Jobs,
       },
       {
+        path: 'learning',
+        name: 'Workshops',
+        component: Workshops,
+      },
+      {
         path: '/worker-account',
         name: 'WorkerAccount',
         component: WorkerAccount,
         meta: { requiresAuth: true },
       },
-
     ],
   },
   {
