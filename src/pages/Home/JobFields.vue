@@ -28,7 +28,7 @@ import { jobFieldsArray } from "../../data";
   <Button
   buttonType="primary"
     extraClass="font-[600] h-[48px] w-[178px]"
-    >شوف كل المجالات</Button
+    @clickButton="$router.push('/jobs')">شوف كل المجالات</Button
   >
    </div>
 </template>
