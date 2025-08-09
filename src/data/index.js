@@ -134,61 +134,73 @@ export const workerExperienceArray = [
 const images = import.meta.glob('../assets/portfolio/*.png', { eager: true });
 export const workerPortfolioArray = [
   {
+    id: 1,
     title: 'شبابيك حديدية مزخرفة',
     description: 'شبابيك أمان بنقوش إسلامية جميلة',
     image: getImageUrl(images['../assets/portfolio/c1.png']),
   },
   {
+    id: 2,
     title: 'معدات المطابخ',
     description: 'ستيل مقاوم للصدأ - 2023',
     image: getImageUrl(images['../assets/portfolio/c2.png']),
   },
   {
+    id: 3,
     title: 'درابزين سلالم معدني',
     description: 'تصنيع وتركيب درابزين سلالم بتصميم عصري',
     image: getImageUrl(images['../assets/portfolio/c3.png']),
   },
   {
+    id: 4,
     title: 'هيكل الألمنيوم',
     description: 'مشروع إنشائي - 2024',
     image: getImageUrl(images['../assets/portfolio/c4.png']),
   },
   {
+    id: 5,
     title: 'بوابات حديدية',
     description: 'عمل فني - 2023',
     image: getImageUrl(images['../assets/portfolio/c5.png']),
   },
   {
+    id: 6,
     title: 'إصلاح المعدات الثقيلة',
     description: 'صيانة صناعية - 2023',
     image: getImageUrl(images['../assets/portfolio/c6.png']),
   },
   {
+    id: 7,
     title: 'تصنيع معدني مخصص',
     description: 'ورشة متخصصة - 2022',
     image: getImageUrl(images['../assets/portfolio/c7.png']),
   },
   {
+    id: 8,
     title: 'أثاث معدني مخصص',
     description: 'تصميم وتنفيذ طاولات وكراسي معدنية فنية',
     image: getImageUrl(images['../assets/portfolio/c8.png']),
   },
   {
+    id: 9,
     title: 'هيكل معدني للحدائق',
     description: 'بناء هيكل معدني للمساحات الخارجية',
     image: getImageUrl(images['../assets/portfolio/c9.png']),
   },
   {
+    id: 10,
     title: 'هيكل معدني للمباني',
     description: 'تنفيذ هيكل معدني لمبنى تجاري',
     image: getImageUrl(images['../assets/portfolio/c10.png']),
   },
   {
+    id: 11,
     title: 'لحام أنابيب الصلب',
     description: 'مشروع صناعي - 2024',
     image: getImageUrl(images['../assets/portfolio/c11.png']),
   },
   {
+    id: 12,
     title: 'بوابة حديدية فنية',
     description: 'تصميم وتنفيذ بوابة حديدية بنقوش عربية تراثية',
     image: getImageUrl(images['../assets/portfolio/c12.png']),

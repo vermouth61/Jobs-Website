@@ -70,6 +70,7 @@ const saveHandler = () => {
 };
 const goToDetails = () => {
   router.push(`/job/${id}`);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 </script>
 <template>

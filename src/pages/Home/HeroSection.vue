@@ -32,7 +32,7 @@ const searchHandler=()=>{
 
   <div dir="rtl" class="relative px-[20px] lg:px-[100px] py-[40px] lg:py-[200px] w-fit mx-auto">
    
-       <h1 class="text-white text-[32px] mb-[16px] lg:text-[64px] font-[700]">الموقع رقم 1 للوظائف في مصر</h1>
+       <h1 class="text-white text-[32px] mb-[16px] lg:text-[64px] font-[700]">مِعلمــين، الثقة اللي تحتاجها في التوظيف</h1>
        <p class="text-white mb-[24px] text-[16px] lg:text-[24px] lg:w-[765px]">
          معلمين هتوصلك بوظائف خالية وفرص عمل في أكبر شركات مصر، مهما كانت مهاراتك،
          خبراتك أو مستوى تعليمك.
