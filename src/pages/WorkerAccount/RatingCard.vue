@@ -24,7 +24,7 @@ defineProps({
             </div>
         </div>
             <div>
-                <p class="text-[#666D80] text-[16px] font-[400] w-full lg:max-w-[335px]">{{ workerRating.comment }}</p>
+                <p class="text-[#666D80] text-[16px] font-[400] w-full xl:max-w-[271px] 2xl:max-w-[335px]">{{ workerRating.comment }}</p>
             </div>
     </div>
 </template>

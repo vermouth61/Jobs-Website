@@ -20,12 +20,15 @@ const logout = () => {
         <input id="side-toggle" type="checkbox" class="peer hidden" />
     <div class="flex items-center gap-3 lg:hidden">
 
-      <label
-        for="side-toggle"
-        class="cursor-pointer inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100"
-      >
-<AiOutlineMenuFold />
-      </label>
+    <label
+            for="side-toggle"
+            class="cursor-pointer inline-flex items-center p-2 justify-center text-sm text-[#246BFD] rounded-lg hover:bg-gray-100"
+            >
+            <div class="flex items-center gap-1">
+                <AiOutlineMenuFold class="w-[26px]" />
+                <span class="font-[600] text-[18px]">إدارة حسابك</span>
+            </div>
+        </label>
     </div>
     <div class="w-full mt-4 peer-checked:flex hidden flex-col gap-[16px] lg:flex lg:flex-col lg:items-start lg:w-full lg:mt-0">
     <router-link to="/profile" class=" text-[#36394A] w-full text-[16px] font-[400] flex items-center">
