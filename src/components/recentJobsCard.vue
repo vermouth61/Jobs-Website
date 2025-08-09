@@ -1,69 +1,75 @@
 <script setup>
-import { HiMiniMapPin } from "vue-icons-plus/hi2";
-import Button from "./ui/button.vue";
-import { FaBuilding, FaTools } from "vue-icons-plus/fa";
-import { Fa6MoneyCheckDollar } from "vue-icons-plus/fa6";
-import { BsBookmark, BsBookmarkFill, BsFillClockFill } from "vue-icons-plus/bs";
-import { onMounted, ref } from "vue";
-import Badge from "./ui/badge.vue";
-import { getSavedJobs, toggleJob } from "../utils";
-const { jobTitle, company, location,id, dailyRate, field, desires } = defineProps({
-  jobTitle: {
-    type: String,
-    required: true,
-  },
-  company: {
-    type: String,
-    required: true,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-  dailyRate: {
-    type: Number,
-    required: true,
-  },
-  field: {
-    type: String,
-    required: true,
-  },
-  desires: {
-    type: Array,
-    required: true,
-  },
-  id: {
-    type: Number,
-    required: true,
-  },
-  status: {
-    type: String,
-    required: false,
-  }
-});
+import { HiMiniMapPin } from 'vue-icons-plus/hi2';
+import Button from './ui/button.vue';
+import { FaBuilding, FaTools } from 'vue-icons-plus/fa';
+import { Fa6MoneyCheckDollar } from 'vue-icons-plus/fa6';
+import { BsBookmark, BsBookmarkFill, BsFillClockFill } from 'vue-icons-plus/bs';
+import { onMounted, ref } from 'vue';
+import Badge from './ui/badge.vue';
+import { getSavedJobs, toggleJob } from '../utils';
+import { useRouter } from 'vue-router';
+const { jobTitle, company, location, id, dailyRate, field, desires } =
+  defineProps({
+    jobTitle: {
+      type: String,
+      required: true,
+    },
+    company: {
+      type: String,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+    dailyRate: {
+      type: Number,
+      required: true,
+    },
+    field: {
+      type: String,
+      required: true,
+    },
+    desires: {
+      type: Array,
+      required: true,
+    },
+    id: {
+      type: Number,
+      required: true,
+    },
+    status: {
+      type: String,
+      required: false,
+    },
+  });
 const emit = defineEmits(['jobRemoved']);
 const savedJobs = ref([]);
 const saved = ref(false);
+const router = useRouter();
 onMounted(() => {
   savedJobs.value = getSavedJobs();
   if (savedJobs.value.find((job) => job.id === id)) {
     saved.value = true;
   }
-})
+});
 const saveHandler = () => {
   saved.value = !saved.value;
- toggleJob({
+  toggleJob({
     jobTitle: jobTitle,
     company: company,
     location: location,
     dailyRate: dailyRate,
     field: field,
     desires: desires,
-    id:id
+    id: id,
   });
-  if(!saved.value){
-    emit('jobRemoved',id)
+  if (!saved.value) {
+    emit('jobRemoved', id);
   }
+};
+const goToDetails = () => {
+  router.push(`/job/${id}`);
 };
 </script>
 <template>
@@ -77,16 +83,16 @@ const saveHandler = () => {
           <h3 class="font-[500] py-[10px] text-[24px]">{{ jobTitle }}</h3>
           <Badge v-if="status" :title="status" />
           <div v-else>
-          <BsBookmark
-            class="cursor-pointer"
-            v-if="!saved"
-            @click="saveHandler"
-          />
-          <BsBookmarkFill
-            class="cursor-pointer"
-            v-else
-            @click="saveHandler"
-          />
+            <BsBookmark
+              class="cursor-pointer"
+              v-if="!saved"
+              @click="saveHandler"
+            />
+            <BsBookmarkFill
+              class="cursor-pointer"
+              v-else
+              @click="saveHandler"
+            />
           </div>
         </div>
         <div class="flex flex-row gap-[66px]">
@@ -111,8 +117,12 @@ const saveHandler = () => {
     </div>
     <div class="flex gap-[8px]">
       <Badge v-for="desire in desires" :title="desire" />
-
     </div>
-    <Button buttonType="outline" extraClass="font-[600]">تفاصيل الشغلانة</Button>
+    <Button
+      buttonType="outline"
+      extraClass="font-[600]"
+      @clickButton="goToDetails"
+      >تفاصيل الشغلانة</Button
+    >
   </div>
 </template>
