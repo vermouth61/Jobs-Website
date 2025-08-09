@@ -13,6 +13,10 @@ const props = defineProps({
     required: true,
   },
   modelValue: [String, Number],
+  extraClass: {
+    type: String,
+    default: '',
+  },
 })
 
 const emit = defineEmits(['update:modelValue'])
@@ -29,7 +33,7 @@ watch(selected, (val) => {
   <div class="relative">
     <select
       v-model="selected"
-      class="appearance-none w-full border-[1px] text-[#666D80] border-[#D1D5DB] rounded-lg p-[10px] pl-10 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-[#246BFD]"
+      :class="[extraClass, 'appearance-none w-full border-[1px] text-[#666D80] rounded-lg p-[10px] pl-10 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-[#246BFD]']"
       @focus="isOpen = true"
       @blur="isOpen = false"
     >

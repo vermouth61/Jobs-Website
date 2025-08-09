@@ -457,6 +457,8 @@ export const fields = [
 ];
 export const levels = ['مبتدئ', 'خبرة متوسطة', 'خبرة عالية'];
 export const salaries = ['100-400', '400-800', '800-1200'];
+export const salaryTypes = ['شهري', 'يومي', 'يتم مناقشته لاحقاً'];
+export const jobTypes = ['دوام كلي', 'دوام جزئي', 'مشروع بالإتفاق'];
 export const governorates = [
   'القاهرة',
   'الجيزة',

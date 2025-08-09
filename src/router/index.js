@@ -14,6 +14,7 @@ import Workshops from '../pages/Workshops.vue';
 import SavedJobs from '../pages/SavedJobs.vue';
 import Portfolio from '../pages/Portfolio.vue';
 import JobApplicants from '../pages/Profile/job-applicants.vue';
+import HiringWorkers from '../pages/HiringWorkers.vue';
 
 const routes = [
   {
@@ -71,6 +72,11 @@ const routes = [
         path: '/portfolio',
         name: 'Portfolio',
         component: Portfolio
+      },
+      {
+        path: '/hiring-workers',
+        name: 'HiringWorkers',
+        component: HiringWorkers
       }
     ],
   },

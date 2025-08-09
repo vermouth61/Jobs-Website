@@ -106,6 +106,7 @@ watch(
             <div class="flex items-center gap-1">
               <HiMiniAdjustmentsHorizontal class="w-[26px]" />
               <span class="font-[600] text-[18px]">تصفية الوظائف</span>
+              :extraClass="'border-[#D1D5DB]'"
             </div>
           </label>
         </div>
@@ -138,6 +139,7 @@ watch(
               :options="fields"
               defaultSelected="مجال عملك"
               v-model="selectedField"
+              :extraClass="'border-[#D1D5DB]'"
             />
           </div>
           <div class="flex flex-col w-full relative gap-[4px]">
@@ -146,6 +148,7 @@ watch(
               :options="governorates"
               defaultSelected="اختر المحافظة"
               v-model="selectedGovernorate"
+              :extraClass="'border-[#D1D5DB]'"
             />
           </div>
           <div class="flex flex-col w-full relative gap-[4px]">
@@ -156,6 +159,7 @@ watch(
               :options="levels"
               defaultSelected="جميع المستويات"
               v-model="selectedLevel"
+              :extraClass="'border-[#D1D5DB]'"
             />
           </div>
           <div class="flex flex-col w-full relative gap-[4px]">
@@ -166,6 +170,7 @@ watch(
               :options="salaries"
               defaultSelected="الكل"
               v-model="selectedSalary"
+              :extraClass="'border-[#D1D5DB]'"
             />
           </div>
         </div>
