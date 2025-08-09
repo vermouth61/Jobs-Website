@@ -66,6 +66,11 @@ const routes = [
         path: '/saved-jobs',
         name: 'SavedJobs',
         component: SavedJobs
+      },
+      {
+        path: '/portfolio',
+        name: 'Portfolio',
+        component: Portfolio
       }
     ],
   },
