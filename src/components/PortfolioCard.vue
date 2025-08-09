@@ -1,8 +1,12 @@
 <script setup>
 defineProps({
     workerPortfolio: {
-        type: Array,
-        default: []
+        type: Object,
+        default: {
+            image: '',
+            title: '',
+            description: '',
+        },
     }
 });
 </script>
