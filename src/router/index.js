@@ -12,6 +12,7 @@ import Jobs from '../pages/Jobs.vue';
 import JobApplication from '../pages/JobApplication.vue';
 import Workshops from '../pages/Workshops.vue';
 import SavedJobs from '../pages/SavedJobs.vue';
+import Portfolio from '../pages/Portfolio.vue';
 
 const routes = [
   {
@@ -60,6 +61,11 @@ const routes = [
         path:'/saved-jobs',
         name:'SavedJobs',
         component:SavedJobs
+      },
+      {
+        path:'/portfolio',
+        name:'Portfolio',
+        component:Portfolio
       }
     ],
   },
