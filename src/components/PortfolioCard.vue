@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <div dir="rtl" class="bg-[#F6F8FA] border-[1px] border-[#B8BCC7] rounded-[8px] p-[16px]">
+    <div dir="rtl" class="bg-white border-[1px] border-[#B8BCC7] rounded-[8px] p-[16px]">
         <div class="flex flex-col items-center mb-[16px]">
             <img :src="workerPortfolio.image" alt="Portfolio Image" class="w-[271px] lg:w-[335px] object-cover rounded-[4px]" />
         </div>
