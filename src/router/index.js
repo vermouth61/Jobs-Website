@@ -11,6 +11,7 @@ import authService from '../services/authService.js';
 import Jobs from '../pages/Jobs.vue';
 import Workshops from '../pages/Workshops.vue';
 import SavedJobs from '../pages/SavedJobs.vue';
+import JobApplicants from '../pages/Profile/job-applicants.vue';
 
 const routes = [
   {
@@ -51,9 +52,14 @@ const routes = [
         component: Profile,
       },
       {
-        path:'/saved-jobs',
-        name:'SavedJobs',
-        component:SavedJobs
+        path: '/job-applicants',
+        name: 'Job-applicants',
+        component: JobApplicants,
+      },
+      {
+        path: '/saved-jobs',
+        name: 'SavedJobs',
+        component: SavedJobs
       }
     ],
   },
