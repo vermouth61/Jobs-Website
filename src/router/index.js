@@ -9,8 +9,10 @@ import ProfileLayout from '../Layout/profileLayout.vue';
 import Profile from '../pages/Profile/Profile.vue';
 import authService from '../services/authService.js';
 import Jobs from '../pages/Jobs.vue';
+import JobApplication from '../pages/JobApplication.vue';
 import Workshops from '../pages/Workshops.vue';
 import SavedJobs from '../pages/SavedJobs.vue';
+import Portfolio from '../pages/Portfolio.vue';
 import JobApplicants from '../pages/Profile/job-applicants.vue';
 
 const routes = [
@@ -27,6 +29,11 @@ const routes = [
         path: 'jobs',
         name: 'Jobs',
         component: Jobs,
+      },
+      {
+        path: 'job/:id',
+        name: 'JobApplication',
+        component: JobApplication,
       },
       {
         path: 'learning',
@@ -50,8 +57,7 @@ const routes = [
         path: '/profile',
         name: 'Profile',
         component: Profile,
-      },
-      {
+      }, {
         path: '/job-applicants',
         name: 'Job-applicants',
         component: JobApplicants,

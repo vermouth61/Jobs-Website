@@ -4,6 +4,9 @@ import { IpHammerAndAnvil } from 'vue-icons-plus/ip';
 import { BsFillPlugFill } from 'vue-icons-plus/bs';
 import { BiSolidWrench } from 'vue-icons-plus/bi';
 
+// function to get image URL and avoid getting error when importing images
+const getImageUrl = (img) => (typeof img === 'string' ? img : img?.default);
+
 export const jobFieldsArray = [
   {
     id: 1,
@@ -133,68 +136,65 @@ export const workerPortfolioArray = [
   {
     title: 'شبابيك حديدية مزخرفة',
     description: 'شبابيك أمان بنقوش إسلامية جميلة',
-    image: images['../assets/portfolio/c1.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c1.png']),
   },
   {
     title: 'معدات المطابخ',
     description: 'ستيل مقاوم للصدأ - 2023',
-    image: images['../assets/portfolio/c2.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c2.png']),
   },
   {
     title: 'درابزين سلالم معدني',
     description: 'تصنيع وتركيب درابزين سلالم بتصميم عصري',
-    image: images['../assets/portfolio/c3.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c3.png']),
   },
   {
     title: 'هيكل الألمنيوم',
     description: 'مشروع إنشائي - 2024',
-    image: images['../assets/portfolio/c4.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c4.png']),
   },
   {
     title: 'بوابات حديدية',
     description: 'عمل فني - 2023',
-    image: images['../assets/portfolio/c5.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c5.png']),
   },
   {
     title: 'إصلاح المعدات الثقيلة',
     description: 'صيانة صناعية - 2023',
-    image: images['../assets/portfolio/c6.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c6.png']),
   },
   {
     title: 'تصنيع معدني مخصص',
     description: 'ورشة متخصصة - 2022',
-    image: images['../assets/portfolio/c7.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c7.png']),
   },
   {
     title: 'أثاث معدني مخصص',
     description: 'تصميم وتنفيذ طاولات وكراسي معدنية فنية',
-    image: images['../assets/portfolio/c8.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c8.png']),
   },
   {
     title: 'هيكل معدني للحدائق',
     description: 'بناء هيكل معدني للمساحات الخارجية',
-    image: images['../assets/portfolio/c9.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c9.png']),
   },
   {
     title: 'هيكل معدني للمباني',
     description: 'تنفيذ هيكل معدني لمبنى تجاري',
-    image: images['../assets/portfolio/c10.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c10.png']),
   },
   {
     title: 'لحام أنابيب الصلب',
     description: 'مشروع صناعي - 2024',
-    image: images['../assets/portfolio/c11.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c11.png']),
   },
   {
     title: 'بوابة حديدية فنية',
     description: 'تصميم وتنفيذ بوابة حديدية بنقوش عربية تراثية',
-    image: images['../assets/portfolio/c12.png'].default,
+    image: getImageUrl(images['../assets/portfolio/c12.png']),
   },
 ];
 
-const peopleImages = import.meta.glob('../assets/peoples/*.jpg', {
-  eager: true,
-});
 const workshopImages = import.meta.glob('../assets/workShops/*.jpg', {
   eager: true,
 });
@@ -208,7 +208,7 @@ export const workshopsData = [
       'تصميم الأثاث الخشبي البسيط باستخدام الأدوات التقليدية والحديثة',
     detailedDescription:
       'هتتعلم في الورشة تصميم وتصنيع الأثاث الخشبي البسيط باستخدام الأدوات التقليدية والحديثة مع التركيز على الجودة والدقة في التنفيذ. ورشة النجارة بيساعدك تتقن مهارات النجارة للمشاريع المنزلية من خلال تمارين عملية على الأخشاب المحلية.',
-    image: workshopImages['../assets/workShops/WS-1.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-1.jpg']),
     category: 'نجارة',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -225,7 +225,7 @@ export const workshopsData = [
       'تعلم تشكيل الحديد وتصنيع الأبواب والنوافذ بأدوات الحدادة الحديثة',
     detailedDescription:
       'هتتعلم في الورشة اللحام بالأرجون (TIG) بتديلك تدريب على اللحام الدقيق بتقنية الأرجون مع التركيز على السلامة وتنفيذ الحامات قوية. ورشة اللحام الكهربائي (ARC (MMA) بيساعدك تتقن اللحام الكهربائي للمشاريع الصناعية من خلال تمارين عملية على قطع حديد محلية.',
-    image: workshopImages['../assets/workShops/WS-2.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-2.jpg']),
     category: 'حدادة',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -241,7 +241,7 @@ export const workshopsData = [
     description: 'فن الدهان وتزيين الجدران بالألوان والتقنيات الحديثة',
     detailedDescription:
       'هتتعلم في الورشة فن الدهان وتزيين الجدران بالألوان والتقنيات الحديثة مع التركيز على الجودة والدقة في التنفيذ. ورشة النقاشة بيساعدك تتقن مهارات الدهان للمشاريع المنزلية من خلال تمارين عملية على الجدران المحلية.',
-    image: workshopImages['../assets/workShops/WS-3.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-3.jpg']),
     category: 'دهان',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -257,7 +257,7 @@ export const workshopsData = [
     description: 'تعلم السباكة من الصفر، تركيب الأنابيب وإصلاح التسريبات',
     detailedDescription:
       'هتتعلم في الورشة السباكة من الصفر، تركيب الأنابيب وإصلاح التسريبات مع التركيز على السلامة والدقة في التنفيذ. ورشة السباكة بيساعدك تتقن مهارات السباكة للمشاريع المنزلية من خلال تمارين عملية على الأنابيب المحلية.',
-    image: workshopImages['../assets/workShops/WS-4.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-4.jpg']),
     category: 'سباكة',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -273,7 +273,7 @@ export const workshopsData = [
     description: 'إتقان قص وتركيب السيراميك والبلاط للأرضيات والجدران',
     detailedDescription:
       'هتتعلم في الورشة إتقان قص وتركيب السيراميك والبلاط للأرضيات والجدران مع التركيز على الجودة والدقة في التنفيذ. ورشة السيراميك بيساعدك تتقن مهارات التركيب للمشاريع المنزلية من خلال تمارين عملية على البلاط المحلي.',
-    image: workshopImages['../assets/workShops/WS-5.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-5.jpg']),
     category: 'تركيب',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -289,7 +289,7 @@ export const workshopsData = [
     description: 'تصميم أسقف الجبس بورد التزيينية، القص الدقيق والتركيب',
     detailedDescription:
       'هتتعلم في الورشة تصميم أسقف الجبس بورد التزيينية، القص الدقيق والتركيب مع التركيز على الجودة والدقة في التنفيذ. ورشة الجبس بورد بيساعدك تتقن مهارات التركيب للمشاريع المنزلية من خلال تمارين عملية على الجبس المحلي.',
-    image: workshopImages['../assets/workShops/WS-6.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-6.jpg']),
     category: 'تركيب',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -306,7 +306,7 @@ export const workshopsData = [
       'بناء جدران الطوب الأحمر، خلط المونة واستخدام المسطرين للإنهاء القوي',
     detailedDescription:
       'هتتعلم في الورشة بناء جدران الطوب الأحمر، خلط المونة واستخدام المسطرين للإنهاء القوي مع التركيز على الجودة والدقة في التنفيذ. ورشة البناء بيساعدك تتقن مهارات البناء للمشاريع المنزلية من خلال تمارين عملية على الطوب المحلي.',
-    image: workshopImages['../assets/workShops/WS-7.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-7.jpg']),
     category: 'بناء',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -323,7 +323,7 @@ export const workshopsData = [
       'تعلم تحضير الوصفات المصرية التقليدية مثل الكشري والملوخية، خبرة احترافية',
     detailedDescription:
       'هتتعلم في الورشة تحضير الوصفات المصرية التقليدية مثل الكشري والملوخية، خبرة احترافية مع التركيز على الجودة والدقة في التنفيذ. ورشة الطبخ بيساعدك تتقن مهارات الطبخ للمشاريع المنزلية من خلال تمارين عملية على المكونات المحلية.',
-    image: workshopImages['../assets/workShops/WS-8.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-8.jpg']),
     category: 'طبخ',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -340,7 +340,7 @@ export const workshopsData = [
       'تنجيد الكنبات، اختيار الأقمشة واستخدام الدباسة لتجديد الأثاث الحديث',
     detailedDescription:
       'هتتعلم في الورشة تنجيد الكنبات، اختيار الأقمشة واستخدام الدباسة لتجديد الأثاث الحديث مع التركيز على الجودة والدقة في التنفيذ. ورشة التنجيد بيساعدك تتقن مهارات التنجيد للمشاريع المنزلية من خلال تمارين عملية على الأقمشة المحلية.',
-    image: workshopImages['../assets/workShops/WS-9.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-9.jpg']),
     category: 'تنجيد',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -356,7 +356,7 @@ export const workshopsData = [
     description: 'إصلاح الغسالات والثلاجات، تشخيص الأعطال واستبدال القطع',
     detailedDescription:
       'هتتعلم في الورشة إصلاح الغسالات والثلاجات، تشخيص الأعطال واستبدال القطع مع التركيز على الجودة والدقة في التنفيذ. ورشة الإصلاح بيساعدك تتقن مهارات الإصلاح للمشاريع المنزلية من خلال تمارين عملية على الأجهزة المحلية.',
-    image: workshopImages['../assets/workShops/WS-10.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-10.jpg']),
     category: 'إصلاح',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -373,7 +373,7 @@ export const workshopsData = [
       'إتقان لحام المعادن بماكينة اللحام الكهربائي وإنشاء الهياكل القوية',
     detailedDescription:
       'هتتعلم في الورشة إتقان لحام المعادن بماكينة اللحام الكهربائي وإنشاء الهياكل القوية مع التركيز على السلامة والدقة في التنفيذ. ورشة اللحام بيساعدك تتقن مهارات اللحام للمشاريع الصناعية من خلال تمارين عملية على المعادن المحلية.',
-    image: workshopImages['../assets/workShops/WS-11.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-11.jpg']),
     category: 'لحام',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -389,7 +389,7 @@ export const workshopsData = [
     description: 'صيانة التكييف، تنظيف الفلاتر وشحن الفريون وتركيب الوحدات',
     detailedDescription:
       'هتتعلم في الورشة صيانة التكييف، تنظيف الفلاتر وشحن الفريون وتركيب الوحدات مع التركيز على الجودة والدقة في التنفيذ. ورشة الصيانة بيساعدك تتقن مهارات الصيانة للمشاريع المنزلية من خلال تمارين عملية على أجهزة التكييف المحلية.',
-    image: workshopImages['../assets/workShops/WS-12.jpg'].default,
+    image: getImageUrl(workshopImages['../assets/workShops/WS-12.jpg']),
     category: 'صيانة',
     location:
       'محافظة المنوفية / مركز قويسنا / قرية شبرا بخوم / ورشة الأسطى فوزي الدباغ',
@@ -399,6 +399,9 @@ export const workshopsData = [
     cost: '1000 جنيه مصري',
   },
 ];
+const peopleImages = import.meta.glob('../assets/peoples/*.jpg', {
+  eager: true,
+});
 
 export const workerRatingArray = [
   {
@@ -406,28 +409,28 @@ export const workerRatingArray = [
     rating: 4.5,
     comment:
       'خبرة ممتازة في اللحام والحدادة. نفذ مشروع الهيكل المعدني لمصنعي بجودة عالية ومهنية كبيرة.',
-    image: peopleImages['../assets/peoples/p1.jpg'].default,
+    image: getImageUrl(peopleImages['../assets/peoples/p1.jpg']),
   },
   {
     name: 'مرزوق الخولي',
     rating: 5,
     comment:
       'عمل متقن ودقيق جداً. أحمد نفذ لي بوابة منزلي بشكل رائع والتزم بالموعد المحدد. أنصح به بشدة',
-    image: peopleImages['../assets/peoples/p2.jpg'].default,
+    image: getImageUrl(peopleImages['../assets/peoples/p2.jpg']),
   },
   {
     name: 'عبد الرحمن شبل',
     rating: 4,
     comment:
       'أسعار معقولة وعمل نظيف ، صنع لي شبابيك حديدية  جميلة جداً ومتينة راضي تماماً عن النتيجة',
-    image: peopleImages['../assets/peoples/p3.jpg'].default,
+    image: getImageUrl(peopleImages['../assets/peoples/p3.jpg']),
   },
   {
     name: 'وهدان ممدوح',
     rating: 5,
     comment:
       'خبرة ممتازة في اللحام والحدادة. نفذ مشروع الهيكل المعدني لمصنعي بجودة عالية ومهنية كبيرة.',
-    image: peopleImages['../assets/peoples/p4.jpg'].default,
+    image: getImageUrl(peopleImages['../assets/peoples/p4.jpg']),
   },
 ];
 
