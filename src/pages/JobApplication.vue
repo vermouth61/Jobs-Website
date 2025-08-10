@@ -3,6 +3,7 @@ import { ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import Button from '../components/ui/button.vue';
 import MyInput from '../components/ui/MyInput.vue';
+import Badge from '../components/ui/badge.vue';
 import RecentJobsCard from '../components/recentJobsCard.vue';
 import data from '../data/data.json';
 import {
@@ -74,17 +75,12 @@ if (!jobData.value) {
               <div class="text-[18px] font-bold">
                 {{ jobData.jobTitle }}
               </div>
-              <div class="desires">
-                <div
-                  class="inline-block align-middle px-2 py-0.5 text-[11px] font-semibold rounded-full bg-[#F3F0FF] text-[#7C3AED] border border-[#E9E3FF]"
-                >
-                  {{ jobData.desires[0] }}
-                </div>
-                <div
-                  class="inline-block align-middle px-2 py-0.5 text-[11px] font-semibold rounded-full bg-[#FFF7ED] text-[#F97316] border border-[#FFE4D0] mr-2"
-                >
-                  {{ jobData.desires[1] }}
-                </div>
+              <div class="flex gap-2">
+                <Badge
+                  v-for="(desire, index) in jobData.desires"
+                  :key="index"
+                  :title="desire"
+                />
               </div>
             </div>
             <div class="flex flex-wrap gap-6 text-gray-600 text-sm mb-2">
