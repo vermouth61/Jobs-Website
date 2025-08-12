@@ -106,7 +106,6 @@ watch(
             <div class="flex items-center gap-1">
               <HiMiniAdjustmentsHorizontal class="w-[26px]" />
               <span class="font-[600] text-[18px]">تصفية الوظائف</span>
-              :extraClass="'border-[#D1D5DB]'"
             </div>
           </label>
         </div>
