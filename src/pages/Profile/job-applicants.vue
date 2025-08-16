@@ -140,7 +140,7 @@ const goToProfile = () => {
           </div>
         </div>
         <div>
-          <Button buttonType="primary" extraClass="  flex  items-center text-[16px]" >
+          <Button buttonType="primary" extraClass="  flex  items-center text-[16px]"  @clickButton="goToProfile">
             شوف صفحتي
           </Button>
         </div>
