@@ -1,7 +1,15 @@
 <script setup>
 import Button from '../../components/ui/button.vue';
+import { useRouter } from 'vue-router';
 
 
+const router = useRouter();
+
+
+const goToProfile = () => {
+  router.push("/profile");
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 </script>
 
@@ -132,7 +140,7 @@ import Button from '../../components/ui/button.vue';
           </div>
         </div>
         <div>
-          <Button buttonType="primary" extraClass="  flex  items-center text-[16px]">
+          <Button buttonType="primary" extraClass="  flex  items-center text-[16px]" >
             شوف صفحتي
           </Button>
         </div>
@@ -193,7 +201,8 @@ import Button from '../../components/ui/button.vue';
         </div>
       </div>
       <div>
-        <Button buttonType="primary" extraClass="  flex  items-center text-[16px]">
+        
+        <Button buttonType="primary" extraClass="  flex  items-center text-[16px]" @clickButton="goToProfile">
           شوف صفحتي
         </Button>
       </div>
