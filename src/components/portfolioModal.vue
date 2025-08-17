@@ -159,7 +159,7 @@ watch(
         </div>
         <label for="file">
           <div
-            class="w-full cursor-pointer text-center rounded-lg p-[24px] bg-[#ECEFF3] border-[1px] border-dashed border-[#666D80]"
+            class="w-full cursor-pointer text-center rounded-lg p-[24px] bg-[#ECEFF3] border-[1px] border-dashed border-[#666D80] hover:border-[#246BFD] hover:bg-[#ecf2ff] duration-300"
           >
             <div v-if="!wImg">
               <svg

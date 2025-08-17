@@ -14,6 +14,8 @@ import {
   HiMiniPaperAirplane,
   HiMiniMapPin,
 } from 'vue-icons-plus/hi2';
+import { toast } from 'vue3-toastify';
+import "vue3-toastify/dist/index.css";
 
 const route = useRoute();
 const router = useRouter();
@@ -37,7 +39,13 @@ const handleFileUpload = (event) => {
 };
 
 const handleSubmit = () => {
-  alert('تم إرسال الطلب بنجاح!');
+  toast('!تم إرسال الطلب بنجاح',{
+    theme: "colored",
+  "type": "success",
+  "position": "top-center",
+  "transition": "slide",
+  "autoClose": 2000,
+});
   coverLetter.value = '';
   expectedSalary.value = '';
   startDate.value = '';
@@ -202,7 +210,6 @@ if (!jobData.value) {
           </div>
 
           <Button
-            @clickButton="handleSubmit"
             buttonType="primary"
             extraClass="w-full flex items-center justify-center gap-2 py-2 text-[15px]"
           >

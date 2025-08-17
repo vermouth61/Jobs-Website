@@ -4,6 +4,7 @@
     import MyInput from '../components/ui/MyInput.vue';
     import Select from '../components/ui/select.vue';
     import { fields, governorates, jobFutures, jobTypes, levels, salaryTypes } from '../data';
+import { toast } from 'vue3-toastify';
 
     const jobTitle = ref('');
     const jobField = ref('');
@@ -41,7 +42,13 @@
 
         if (jobTitleError.value || jobFieldError.value || jobTypeError.value || factoryNameError.value || governorateError.value || experienceLevelError.value || salaryTypeError.value || salaryValueError.value || jobDetailsError.value || requiredSkillsError.value) {
             console.log(jobDetailsError,jobFieldError,jobTitleError,jobTypeError,salaryTypeError,salaryValueError,governorateError,factoryNameError,requiredSkillsError,experienceLevelError)
-            alert('يرجى ملء جميع الحقول المطلوبة بشكل صحيح.');
+            toast('يرجى ملء جميع الحقول المطلوبة بشكل صحيح.', {
+                theme: "colored",
+                type: "error",
+                position: "top-center",
+                transition: "slide",
+                autoClose: 2000
+            });
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return false;
         }
@@ -65,7 +72,13 @@
                 details: jobDetails.value,
                 skills: requiredSkills.value
             };
-            alert('تم إضافة الوظيفة بنجاح!');
+            toast('!تم إضافة الوظيفة بنجاح', {
+                theme: "colored",
+                type: "success",
+                position: "top-center",
+                transition: "slide",
+                autoClose: 2000
+            });
             jobTitle.value = '';
             jobField.value = '';
             jobType.value = '';
