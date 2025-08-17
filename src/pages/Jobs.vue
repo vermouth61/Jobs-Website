@@ -8,6 +8,7 @@ import MyInput from "../components/ui/MyInput.vue";
 import { GrSearch } from "vue-icons-plus/gr";
 import Select from "../components/ui/select.vue";
 import { fields, governorates, levels, salaries } from "../data";
+import Button from "../components/ui/button.vue";
 
 const route = useRoute();
 const allJobs = ref(data.recentJobsArray);
@@ -18,7 +19,17 @@ const selectedGovernorate = ref("");
 const selectedLevel = ref("");
 const selectedSalary = ref("");
 let debounceTimer;
+const resetKey = ref(0);
 
+const resetFilters = () => {
+    search.value = "";
+    debouncedSearch.value = "";
+    selectedField.value = "";
+    selectedGovernorate.value = "";
+    selectedLevel.value = "";
+    selectedSalary.value = "";
+    resetKey.value++;
+};
 onMounted(() => {
     if (route.query.search) {
         search.value = route.query.search;
@@ -92,13 +103,13 @@ watch(
 
 <template>
   <div dir="rtl" class="container mx-auto mb-[128px] mt-12">
-    <div class="flex flex-col lg:flex-row gap-[20px]">
+    <div class="flex flex-col xl:flex-row gap-[20px]">
       <div
         dir="rtl"
-        class="bg-[#F6F8FA] lg:border-[1px] lg:border-[#B8BCC7] lg:rounded-[8px] p-[24px] h-fit w-full lg:max-w-[400px] flex flex-col gap-[24px]"
+        class="bg-[#F6F8FA] xl:border-[1px] xl:border-[#B8BCC7] xl:rounded-[8px] p-[24px] h-fit w-full xl:max-w-[400px] flex flex-col gap-[24px]"
       >
         <input id="side-toggle" type="checkbox" class="peer hidden" />
-        <div class="flex items-center gap-3 lg:hidden">
+        <div class="flex items-center gap-3 xl:hidden">
           <label
             for="side-toggle"
             class="cursor-pointer inline-flex items-center p-2 justify-center text-sm text-[#246BFD] rounded-lg hover:bg-gray-100"
@@ -110,9 +121,9 @@ watch(
           </label>
         </div>
         <div
-          class="w-full mt-4 peer-checked:flex hidden flex-col gap-[16px] lg:flex lg:flex-col lg:items-start lg:w-full lg:mt-0"
+          class="w-full mt-4 peer-checked:flex hidden flex-col gap-[16px] xl:flex xl:flex-col xl:items-start xl:w-full xl:mt-0"
         >
-          <div class="hidden lg:flex items-center gap-2 text-[#246BFD]">
+          <div class="hidden xl:flex items-center gap-2 text-[#246BFD]">
             <HiMiniAdjustmentsHorizontal class="w-[26px]" />
             <span class="font-[600] text-[24px]">تصفية الوظائف</span>
           </div>
@@ -135,6 +146,7 @@ watch(
               >مجال العمل</label
             >
             <Select
+            :key="'field-'+resetKey"
               :options="fields"
               defaultSelected="مجال عملك"
               v-model="selectedField"
@@ -144,6 +156,7 @@ watch(
           <div class="flex flex-col w-full relative gap-[4px]">
             <label for="search" class="text-[16px] font-[600]">المحافظة</label>
             <Select
+              :key="'governorate-'+resetKey"
               :options="governorates"
               defaultSelected="اختر المحافظة"
               v-model="selectedGovernorate"
@@ -155,6 +168,7 @@ watch(
               >مستوى الخبرة</label
             >
             <Select
+              :key="'level-'+resetKey"
               :options="levels"
               defaultSelected="جميع المستويات"
               v-model="selectedLevel"
@@ -166,12 +180,18 @@ watch(
               >نطاق الراتب اليومي</label
             >
             <Select
+              :key="'salary-'+resetKey"
               :options="salaries"
               defaultSelected="الكل"
               v-model="selectedSalary"
               :extraClass="'border-[#D1D5DB]'"
             />
           </div>
+          <Button
+            buttonType="primary"
+            extraClass="w-full text-[16px]"
+            @clickButton="resetFilters"
+          >محو التصفية</Button>
         </div>
       </div>
       <div>

@@ -10,9 +10,9 @@ import WorkerContact from './WorkerContact.vue';
 </script>
 
 <template>
-   <div dir="rtl" class="flex flex-col gap-[20px] flex-wrap justify-center lg:justify-start w-full">
-      <div class="flex gap-[20px] flex-wrap justify-center lg:justify-start">
-         <div class="flex flex-col gap-[20px] flex-2">
+   <div dir="rtl" class="flex flex-col gap-[20px] w-full">
+      <div class="grid grid-cols-1 xl:grid-cols-3 gap-[20px] ">
+         <div class="flex flex-col gap-[20px] xl:col-span-2">
                <WorkerSummary workerName="أحمد محمد الشرقاوي" 
                               workerPosition="لحام أرجون و كهرباء" 
                               workerDescription="فني لحام محترف بخبرة 5 سنوات في اللحام الكهربائي ولحام الأرجون. أتميّز بدقة عالية في العمل، وحرص دائم على السلامة والجودة في تنفيذ المهام." />
