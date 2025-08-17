@@ -11,7 +11,7 @@ import { jobFieldsArray } from "../../data";
   
   
   <div class="text-center">
-    <h2 class="text-[#246BFD] text-[48px] font-[700]">
+    <h2 class="text-[#246BFD] text-[32px] md:text-[48px] font-[700]">
       مجالات الوظائف المتاحة
     </h2>
   </div>

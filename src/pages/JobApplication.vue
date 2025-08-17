@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import Button from '../components/ui/button.vue';
 import MyInput from '../components/ui/MyInput.vue';
@@ -23,7 +23,9 @@ const jobData = computed(() => allJobs.find((job) => job.id === jobId.value));
 const similarJobs = computed(() =>
   allJobs.filter((job) => job.id !== jobId.value).slice(0, 6)
 );
-
+onMounted(() => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 const coverLetter = ref('');
 const expectedSalary = ref('');
 const startDate = ref('');

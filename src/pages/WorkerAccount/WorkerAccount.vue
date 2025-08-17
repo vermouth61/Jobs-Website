@@ -10,6 +10,10 @@ import { FaFolderOpen } from 'vue-icons-plus/fa';
 import { AiFillStar } from 'vue-icons-plus/ai';
 import RatingCard from './RatingCard.vue';
 import { workerRatingArray } from '../../data/index.js';
+import { onMounted } from 'vue';
+onMounted(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+})
 </script>
 
 <template>

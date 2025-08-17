@@ -27,7 +27,7 @@ const { currentUser, isLoggedIn, logout } = useAuth();
         <div v-else class="flex items-center gap-2">
           <router-link
             to="/profile"
-            class="flex items-center gap-2 bg-white rounded-full px-3 py-1 hover:bg-gray-50 transition-colors border border-gray-200"
+            class="items-center gap-2 hidden sm:flex bg-white rounded-full px-3 py-1 hover:bg-gray-50 transition-colors border border-gray-200"
           >
             <span class="text-sm text-gray-700 font-medium"
               >أهلاً، {{ currentUser?.firstName }}</span

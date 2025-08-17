@@ -10,11 +10,11 @@ import data from "../../data/data.json";
     dir="rtl"
   >
     <div class="flex flex-col text-center gap-[14px]">
-      <h2 class="text-[#246BFD] text-[48px] font-[700]">الوظائف المتاحة</h2>
+      <h2 class="text-[#246BFD] text-[32px] md:text-[48px] font-[700]">الوظائف المتاحة</h2>
     </div>
     <div class="flex flex-wrap justify-center 2xl:gap-[40px] gap-[20px]">
       <RecentJobsCard
-        v-for="job in data.recentJobsArray"
+        v-for="job in data.recentJobsArray.slice(0, 6)"
         :key="job.id"
         :id="job.id"
         :jobTitle="job.jobTitle"

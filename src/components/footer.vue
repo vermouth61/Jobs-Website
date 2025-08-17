@@ -13,7 +13,7 @@ import { RiFacebookFill, RiTwitterXFill } from "vue-icons-plus/ri";
     <div class="container mx-auto">
 
     
-    <div dir="rtl" class="flex flex-wrap gap-5 justify-between mb-[45px] items-start">
+    <div dir="rtl" class="flex flex-col sm:px-[0px] px-[16px] sm:flex-row sm:flex-wrap gap-5 justify-between mb-[45px] items-start">
       <div class="flex flex-col w-[392px] gap-[21px]">
         <div>
           <img src="../assets/logo.svg" alt="LOGO" />
