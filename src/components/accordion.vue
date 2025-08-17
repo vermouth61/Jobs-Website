@@ -27,7 +27,7 @@ const accordionOpen = ref(open)
         :aria-expanded="accordionOpen"
         aria-controls="accordion-text-01"
       >
-        <span class="text-[22px]  cursor-pointer">{{ title }}</span>
+        <span class="text-[14px] sm:text-[22px]  cursor-pointer">{{ title }}</span>
         <EpArrowLeft class="transform origin-center  cursor-pointer transition duration-200 ease-out" :class="{ '!rotate-90': accordionOpen }"/>
 
       </button>
@@ -40,7 +40,7 @@ const accordionOpen = ref(open)
       :class="accordionOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
     >
       <div class="overflow-hidden">
-        <p class="pb-3 text-[18px] text-[#68727D]">
+        <p class="pb-3 text-[12px] sm:text-[18px] text-[#68727D]">
             <slot></slot>
         </p>
       </div>

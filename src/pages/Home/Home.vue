@@ -16,14 +16,14 @@ const router = useRouter();
   <div class="container mx-auto">
     <div
       dir="rtl"
-      class="my-[80px] flex lg:flex-row lg:justify-between items-center flex-col gap-[24px] py-[40px]"
+      class="my-[80px] px-[16px] sm:px-[0px] flex lg:flex-row lg:justify-between items-center flex-col gap-[8px] sm:gap-[24px] py-[40px]"
     >
-      <div class="flex flex-col justify-start gap-[24px] py-[16px]">
-        <div class="flex flex-col gap-[16px]">
-          <h3 class="text-[40px] text-[#246BFD] font-[600]">
+      <div class="flex flex-col justify-start gap-[16px] sm:gap-[24px] py-[16px]">
+        <div class="flex flex-col sm:gap-[16px]">
+          <h3 class="text-[32px] sm:text-[40px] text-[#246BFD] font-[600]">
             محتاج تتعلم مهارة جديدة في شغلك ؟
           </h3>
-          <p class="text-[24px] font-[400] text-[#666D80]">
+          <p class="text-[18px] sm:text-[24px] font-[400] text-[#666D80]">
             طور المهارات اللي عندك في مجال شغلك واتعلم الحاجات الجديدة اللي
             تميزك عن باقي المعلمين ، ادخل اتعلم وطبق بإيدك علشان تكون معلم وكمان
             فنان!
@@ -48,15 +48,15 @@ const router = useRouter();
   <div class="container mx-auto">
     <div
       dir="rtl"
-      class="my-[80px] flex lg:flex-row lg:justify-between items-center flex-col gap-[24px] py-[40px]"
+      class="my-[80px] px-[16px] sm:px-[0px] flex lg:flex-row lg:justify-between items-center flex-col gap-[8px] sm:gap-[24px] py-[40px]"
     >
       <div class="lg:w-3/4">
         <img class="rounded-lg" src="../../assets/joinUs.jpg" alt="Learning" />
       </div>
-      <div class="flex flex-col justify-start gap-[24px] py-[16px]">
-        <div class="flex flex-col gap-[16px]">
-          <h3 class="text-[40px] text-[#246BFD] font-[600]">انضم إلينا الآن</h3>
-          <p class="text-[24px] font-[400] text-[#666D80]">
+      <div class="flex flex-col justify-start gap-[16px] sm:gap-[24px] py-[16px]">
+        <div class="flex flex-col sm:gap-[16px]">
+          <h3 class="text-[32px] sm:text-[40px] text-[#246BFD] font-[600]">انضم إلينا الآن</h3>
+          <p class="text-[18px] sm:text-[24px] font-[400] text-[#666D80]">
             سواء كنت عامل بتدور على شغل ، أو صاحب ورشة أو مصنع ومحتاج عُمال
             يشتغلوا معاك ، هنا هتلاقي طلبك بكل سهولة ، سجل حسابك معانا دلوقتي
             وابدأ رحلتك معانا!

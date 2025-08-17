@@ -7,7 +7,7 @@ const router = useRouter();
 
 
 const goToProfile = () => {
-  router.push("/profile");
+  router.push("/worker-account");
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 

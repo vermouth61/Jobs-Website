@@ -15,7 +15,7 @@ const handleJobRemoved = (jobId) => {
 
 <template>
     <div class="w-full">
-        <h1 dir="rtl" class="text-[#246BFD] text-[32px] font-[600] mb-[24px]">الوظائف المحفوظة</h1>
+        <h1 dir="rtl" class="text-[#246BFD] text-center sm:text-start text-[32px] font-[600] mb-[24px]">الوظائف المحفوظة</h1>
     
         <div class="flex flex-wrap justify-center xl:justify-start gap-[20px]">
               <RecentJobsCard

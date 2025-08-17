@@ -7,10 +7,10 @@ import { LuBookMarked } from 'vue-icons-plus/lu';
 <template>
     <section class="container mx-auto">
 
-        <div dir="rtl" class="mt-[56px] py-[40px] ">
+        <div dir="rtl" class="mt-[8px] md:mt-[56px] py-[40px] ">
           <div class="flex flex-col gap-[16px]">
-            <h1 class="text-center text-[48px] font-[700] text-[#246BFD]">من نحن</h1>
-            <p class="text-center text-[32px] text-[#666D80]">
+            <h1 class="text-center text-[32px] md:text-[48px] font-[700] text-[#246BFD]">من نحن</h1>
+            <p class="text-center text-[18px] md:text-[32px] text-[#666D80]">
               "معلمين" هو المكان اللي بيجمعك بأفضل الحرفيين في مصر <br>
               من أول سباك لنقّاش،
               تقدر تلاقي اللي إنت محتاجه بضغطة واحدة

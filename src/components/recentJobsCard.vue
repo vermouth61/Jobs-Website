@@ -70,13 +70,12 @@ const saveHandler = () => {
 };
 const goToDetails = () => {
   router.push(`/job/${id}`);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 </script>
 <template>
   <div
     dir="rtl"
-    class="p-[24px] border-1 bg-white border-[#DFE1E7] rounded-lg flex flex-col gap-[16px] w-[400px]"
+    class="p-[24px] border-1 bg-white border-[#DFE1E7] rounded-lg flex flex-col gap-[16px] w-[375px] sm:w-[400px]"
   >
     <div>
       <div class="flex flex-col gap-[8px]">
