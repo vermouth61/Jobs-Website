@@ -81,12 +81,14 @@ onMounted(() => {
       <router-link to="/" class="flex items-center justify-center mb-4"
         ><img src="/src/assets/logo.svg" alt="logo"
       /></router-link>
-      <h2 class="text-4xl font-bold">الورشة والمعلم ، معانا الكل كسبان</h2>
+      <h2 class="text-lg sm:text-4xl font-bold">
+        الورشة والمعلم ، معانا الكل كسبان
+      </h2>
     </div>
     <div
-      class="bg-white rounded-xl shadow-lg px-8 py-10 w-full max-w-xl flex flex-col z-10"
+      class="bg-white rounded sm:rounded-xl shadow-lg px-8 py-10 w-full max-w-xl flex flex-col z-10"
     >
-      <h2 class="text-center text-lg font-bold text-gray-800 mb-6">
+      <h2 class="text-center sm:text-lg font-bold text-gray-800 mb-6">
         تسجيل الدخول
       </h2>
 
@@ -104,7 +106,7 @@ onMounted(() => {
         {{ error }}
       </div>
 
-      <div class="flex gap-2 mb-4 font-semibold w-full">
+      <div class="flex gap-2 mb-4 font-semibold text-base sm:text-lg w-full">
         <Button
           extraClass="bg-gray-100 border border-gray-300 hover:bg-gray-300 w-full"
           :disabled="loading"
