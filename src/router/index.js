@@ -15,6 +15,7 @@ import SavedJobs from '../pages/SavedJobs.vue';
 import Portfolio from '../pages/Portfolio.vue';
 import JobApplicants from '../pages/Profile/job-applicants.vue';
 import HiringWorkers from '../pages/HiringWorkers.vue';
+import ProfileSettings from '../pages/Profile/settings.vue'
 
 const routes = [
   {
@@ -62,6 +63,11 @@ const routes = [
         path: '/job-applicants',
         name: 'Job-applicants',
         component: JobApplicants,
+      },
+      {
+        path: '/profile-settings',
+        name: 'profile-settings',
+        component: ProfileSettings,
       },
       {
         path: '/saved-jobs',
