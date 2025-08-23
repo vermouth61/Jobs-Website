@@ -159,8 +159,10 @@ onMounted(() => {
       <router-link to="/" class="flex items-center justify-right mb-4"
         ><img src="/src/assets/logo.svg" alt="logo"
       /></router-link>
-      <h2 class="text-4xl font-bold mb-4">المكان المناسب للمعلمين</h2>
-      <ul class="flex flex-col gap-3 text-lg">
+      <h2 class="text-lg sm:text-4xl font-bold mb-4">
+        المكان المناسب للمعلمين
+      </h2>
+      <ul class="flex flex-col gap-3 sm:text-lg">
         <li class="flex gap-2">
           <Fa6Check />
           <p>هتلاقى وظائف جديدة كل يوم</p>
@@ -178,7 +180,9 @@ onMounted(() => {
           <p>شوف الفرص المتاحه واختار المناسب ليك</p>
         </li>
       </ul>
-      <h3 class="text-2xl font-semibold mt-4">انضم لينا وابدأ رحلتك معانا !</h3>
+      <h3 class="text-lg sm:text-2xl font-semibold mt-4">
+        انضم لينا وابدأ رحلتك معانا !
+      </h3>
     </div>
     <div
       class="bg-white rounded-xl shadow-lg px-8 py-10 w-full max-w-xl flex flex-col z-10"
@@ -201,7 +205,7 @@ onMounted(() => {
         {{ error }}
       </div>
 
-      <div class="flex gap-2 mb-4 font-semibold w-full">
+      <div class="flex gap-2 mb-4 font-semibold text-base sm:text-lg w-full">
         <Button
           extraClass="bg-gray-100 border border-gray-300 hover:bg-gray-300 w-full"
           :disabled="loading"
