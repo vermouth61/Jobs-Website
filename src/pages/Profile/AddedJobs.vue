@@ -1,5 +1,5 @@
 <script setup>
-    import RecentJobsCard from '../../components/RecentJobsCard.vue';
+    import RecentJobsCard from '../../components/recentJobsCard.vue';
     import data from '../../data/data.json';
 </script>
 
